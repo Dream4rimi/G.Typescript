@@ -1,1 +1,6 @@
+// Downlod Node.js Typescript Git-bash and sighn in Git-hub
+// These packages are must required fot your Pc
+// Typescript file ko javascript mein convert karne ke liye (tsc main.ts) ka istmal karen...
+// Or javascript file se terminal ke zariye output leny ke liye (node maine.js) ka use karen...
+
 console.log("Hello World");
