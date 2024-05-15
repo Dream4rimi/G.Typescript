@@ -4,7 +4,8 @@
 // 4_ objects all mrthods anounymous type, interface type and custom type
 // 5_ object in object values acces in 2 way
 // 6_ type Alias
-// 7_ aik student details ka object bnana hai phir aik function create karna hai jiske andar 
+// 7_ object pass in function and then function pass in array
+// 8_ aik student details ka object bnana hai phir aik function create karna hai jiske andar 
 // ham object ko pass krwaenge Main data base mein or iske andar adding delete rename replace ke option bhi moujod ho 
 // <-------------------------------------------------End---------------------------------------------------->
 // forEach or map mein kya defrence hai ?
@@ -267,23 +268,136 @@
 // }
 // console.log(user1);
 // <-------------------------------------------------End---------------------------------------------------->
+// 7_ object pass in function and then function pass in array
+// let Data_base = [];
+// type details = {
+//     name: string,
+//     age: number,
+//     fatherName: string,
+//     roll_num: number,
+//     course: string,
+//     email: string,
+//     adress: string,
+//     onsite: boolean,
+// }
+// let student: details = {
+//     name: "Shoaib",
+//     age: 23,
+//     fatherName: "Bashir ahmed",
+//     roll_num: 204428,
+//     course: "Governer House IT initiative Web 3.0",
+//     email: "sk9952908@gmail.com",
+//     adress: "mai nahi btaonga",
+//     onsite: true
+// };
+// function passing_Obj(object_values: { [key: string]: any }){
+//    for (let obj in object_values){
+//      console.log(`${obj}: ${object_values[obj]}`)
+//    }
+//    return object_values;
+// }
+// let print = passing_Obj(student);
+// Data_base.push(print);
+// console.log(Data_base);
+// Notes
+// is function meinloop ke zariye jo ye  console.log(`${obj}: ${object_values[obj]}`) expression likha gaya hai
+// isme ${obj} mein object ki key value store hoti hain or isme ${object_values[obj]} object ki corresponding key value 
+// hoti hai isliye jab ham console mein dono ko print krwaty hain to key value ke sath uski corresponding value
+// bhi print ho jati hai aik sath...
+// <-------------------------------------------------End---------------------------------------------------->
 // project
 // aik student details ka object bnana hai phir aik function create karna hai jiske andar 
-// ham object ko pass krwaenge Main data base mein or iske andar adding delete rename replace ke option bhi moujod ho...
-let Data_base = [];
-let student = {
-    name: "Shoaib",
-    age: 23,
-    fatherName: "Bashir ahmed",
-    roll_num: 204428,
-    course: "Governer House IT initiative Web 3.0",
-    email: "sk9952908@gmail.com",
-    adress: "mai nahi btaonga",
-    onsite: true
-};
-function passing_Obj(object_values) {
-    return Data_base.push(object_values);
+// ham object ko pass krwaenge Main data base mein or iske andar adding, delete, rename, replace, ke option bhi moujod ho.
+import inquirer from 'inquirer';
+// main data base everything store in 
+let Data_Base = [];
+let checker = [];
+// Asking questions from User and store it in object
+let Student_details = await inquirer.prompt([
+    {
+        name: "name",
+        message: "What is your name?",
+        type: "string"
+    },
+    {
+        name: "father",
+        message: "What is your father name?",
+        type: "string"
+    },
+    {
+        name: "age",
+        message: "What is your age?",
+        type: "number"
+    },
+    {
+        name: "course",
+        message: "What course are you pursuing?",
+        type: "string"
+    },
+    {
+        name: "location",
+        message: "Are you studying onsite or offline?",
+        type: "checkbox",
+        choices: [{ name: "Onsite", value: "Onsite" }, { name: "Offline", value: "Offline" }]
+        // choices: ["Onsite", "Offline"]
+    }
+]);
+// function that accepting object argument from object
+function data_pass(object_values) {
+    for (let data in data_pass) {
+        console.log(`${data}: ${object_values[data]}`);
+    }
+    // Data_Base.push(New_data);
+    return object_values;
 }
-let print = passing_Obj([student]);
-console.log(print);
-export {};
+let print = data_pass(Student_details); // retun object in veriable
+Data_Base.push(print);
+console.log(Data_Base); // Main data list print
+// yahn ham main data base ki list mein changes kar rhy hain
+let modification = await inquirer.prompt([
+    {
+        name: "ask",
+        message: "Do you want to change anything?",
+        type: "confirm",
+        default: "false"
+    }
+]);
+// veriable bahar declare kiyya kiyun adding.add ki condition ka scop chota par rha tha
+// let adding: any;
+// agr user ne changes karnay chahy to uske liye ye list show hogi
+if (modification.ask === true) {
+    let user_yes = await inquirer.prompt([
+        {
+            name: "modi",
+            message: "Please choose your option",
+            type: "list",
+            choices: ["Add", "Delete", "Rename", "Replace"]
+        }
+    ]);
+    //  Add ki statment
+    if (user_yes.modi === "Add") {
+        let adding = await inquirer.prompt({
+            name: "add",
+            message: "What you want to add in your list?",
+            type: "input"
+        });
+        if (adding.add !== "") {
+            checker.push(adding.add);
+            console.log(Data_Base); // Main data list print
+            console.log("Your input list", checker);
+        }
+        ;
+    }
+    ;
+    // Delete ki statment
+    if (user_yes === "Delete") {
+        let del = await inquirer.prompt([
+            {
+                name: "delete",
+                message: "What you want to delete?",
+                type: "list",
+                choices: Data_Base
+            }
+        ]);
+    }
+}
