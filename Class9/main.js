@@ -7,6 +7,13 @@
 // 7_ object pass in function and then function pass in array
 // 8_ aik student details ka object bnana hai phir aik function create karna hai jiske andar 
 // ham object ko pass krwaenge Main data base mein or iske andar adding delete rename replace ke option bhi moujod ho 
+// self check quiz using inquirer
+// Home work assigment start
+// // Basic function creation
+// 1. Using default parameter
+// 2. Using default parameter
+// 3. Arrow function conversion
+// 4. Implementing a Rest parameter
 // <-------------------------------------------------End---------------------------------------------------->
 // forEach or map mein kya defrence hai ?
 // Typescript mein forEach or map 2no methods arrays ke saath istemal kiye jaate hain jo array mein se har value ko 
@@ -308,96 +315,166 @@
 // project
 // aik student details ka object bnana hai phir aik function create karna hai jiske andar 
 // ham object ko pass krwaenge Main data base mein or iske andar adding, delete, rename, replace, ke option bhi moujod ho.
-import inquirer from 'inquirer';
-// main data base everything store in 
-let Data_Base = [];
-let checker = [];
-// Asking questions from User and store it in object
-let Student_details = await inquirer.prompt([
-    {
-        name: "name",
-        message: "What is your name?",
-        type: "string"
-    },
-    {
-        name: "father",
-        message: "What is your father name?",
-        type: "string"
-    },
-    {
-        name: "age",
-        message: "What is your age?",
-        type: "number"
-    },
-    {
-        name: "course",
-        message: "What course are you pursuing?",
-        type: "string"
-    },
-    {
-        name: "location",
-        message: "Are you studying onsite or offline?",
-        type: "checkbox",
-        choices: [{ name: "Onsite", value: "Onsite" }, { name: "Offline", value: "Offline" }]
-        // choices: ["Onsite", "Offline"]
-    }
-]);
-// function that accepting object argument from object
-function data_pass(object_values) {
-    for (let data in data_pass) {
-        console.log(`${data}: ${object_values[data]}`);
-    }
-    // Data_Base.push(New_data);
-    return object_values;
-}
-let print = data_pass(Student_details); // retun object in veriable
-Data_Base.push(print);
-console.log(Data_Base); // Main data list print
-// yahn ham main data base ki list mein changes kar rhy hain
-let modification = await inquirer.prompt([
-    {
-        name: "ask",
-        message: "Do you want to change anything?",
-        type: "confirm",
-        default: "false"
-    }
-]);
-// veriable bahar declare kiyya kiyun adding.add ki condition ka scop chota par rha tha
-// let adding: any;
-// agr user ne changes karnay chahy to uske liye ye list show hogi
-if (modification.ask === true) {
-    let user_yes = await inquirer.prompt([
-        {
-            name: "modi",
-            message: "Please choose your option",
-            type: "list",
-            choices: ["Add", "Delete", "Rename", "Replace"]
-        }
-    ]);
-    //  Add ki statment
-    if (user_yes.modi === "Add") {
-        let adding = await inquirer.prompt({
-            name: "add",
-            message: "What you want to add in your list?",
-            type: "input"
-        });
-        if (adding.add !== "") {
-            checker.push(adding.add);
-            console.log(Data_Base); // Main data list print
-            console.log("Your input list", checker);
-        }
-        ;
-    }
-    ;
-    // Delete ki statment
-    if (user_yes === "Delete") {
-        let del = await inquirer.prompt([
-            {
-                name: "delete",
-                message: "What you want to delete?",
-                type: "list",
-                choices: Data_Base
-            }
-        ]);
-    }
-}
+// import inquirer from 'inquirer'
+// // main data base everything store in 
+// let Data_Base = [];
+// let checker = []
+// // Asking questions from User and store it in object
+// let Student_details = await inquirer.prompt(
+//     [
+//         {
+//             name: "name",
+//             message: "What is your name?",
+//             type: "string"
+//         },
+//         {
+//             name: "father",
+//             message: "What is your father name?",
+//             type: "string"
+//         },
+//         {
+//             name: "age",
+//             message: "What is your age?",
+//             type: "number"
+//         },
+//         {
+//             name: "course",
+//             message: "What course are you pursuing?",
+//             type: "string"
+//         },
+//         {
+//             name: "location",
+//             message: "Are you studying onsite or offline?",
+//             type: "checkbox",
+//             choices: [{name: "Onsite", value: "Onsite"},{name: "Offline", value: "Offline"} ]
+//             // choices: ["Onsite", "Offline"]
+//         }
+//     ]
+// );
+// // function that accepting object argument from object
+// function data_pass(object_values: { [key: string]: any }){
+//     for(let data in object_values){
+//         console.log(`${data}: ${object_values[data]}`)
+//     }
+//     // Data_Base.push(New_data);
+//     return object_values
+// }
+// let print = data_pass(Student_details); // retun object in veriable
+// Data_Base.push(print);
+// console.log(Data_Base); // Main data list print
+// // yahn ham main data base ki list mein changes kar rhy hain
+// let modification = await inquirer.prompt(
+//     [
+//         {
+//             name: "ask",
+//             message: "Do you want to change anything?",
+//             type: "confirm",
+//             default: "false"
+//         }
+//     ]
+// );
+// // agr user ne changes karnay chahy to uske liye ye list show hogi
+// if(modification.ask === true){
+//     let user_yes = await inquirer.prompt([
+//         {
+//             name: "modi",
+//             message: "Please choose your option",
+//             type: "list",
+//             choices: ["Add", "Delete", "Rename", "Replace"]
+//         }
+//     ]);
+// //  Add ki statment
+//     if(user_yes.modi === "Add"){
+//       let adding = await inquirer.prompt(
+//             {
+//                 name: "add",
+//                 message: "What you want to add in your list?",
+//                 type: "input"
+//             }
+//         )
+//         if(adding.add !== ""){
+//             checker.push(adding.add)
+//             console.log(Data_Base); // Main data list print
+//             console.log("Your input list", checker)
+//         };
+//     };
+// // Delete ki statment
+//     if(user_yes.modi === "Delete"){
+//         let del = await inquirer.prompt([
+//             {
+//                 name: "delete",
+//                 message: "What you want to delete?",
+//                 type: "list",
+//                 choices: Data_Base
+//             }
+//         ]);
+//     }
+// }
+// <-------------------------------------------------End---------------------------------------------------->
+// self check quiz using inquirer
+// import inquirer from 'inquirer'
+// let self = await inquirer.prompt(
+//     {
+//         name: "check",
+//         message: "What is the capital of France",
+//         type: "input"
+//     }
+// );
+// function quiz(question: string, correctAnswer: string){
+//     if(self.check.toLowerCase() === correctAnswer.toLowerCase()){
+//         console.log("Correct answer")
+//     }
+//     else{console.log("Wrong answer. try again")}
+// };
+// quiz("What is the captal of france", "paris");
+// <-------------------------------------------------End---------------------------------------------------->
+// Home Work Assigment Start
+// <-------------------------------------------------End---------------------------------------------------->
+// 1. Basic function creation
+// function calculateProduct(parameter1: number, parameter2: number):number{
+//    return parameter1 * parameter2
+// };
+// let result = calculateProduct(5, 10);
+// console.log("your result: " + result);  // Output 50
+// <-------------------------------------------------End---------------------------------------------------->
+// 2. Using default parameter
+// function greet(name: string, greeting: string = "Hello"){
+//    return `${greeting} ${name}`
+// };
+// let result = greet("shoaib");
+// console.log(result);   // Output Hello shoaib
+// <-------------------------------------------------End---------------------------------------------------->
+// 3. Arrow function conversion
+// convert the following traditional function into an arrow function.
+// example 1
+// function add(a: number, b: number){
+//     return a + b
+// };
+// let result = add(23, 26);
+// console.log(result);  // Output 49
+// example 2
+// let add = (a: number, b: number) => a + b;
+// let result = add(3, 5);
+// console.log(result);  // Output 8
+// <-------------------------------------------------End---------------------------------------------------->
+// 4. Implementing a Rest parameter
+// Write a function sumAll that uses a rest parameter ti take any number of arguments
+// and returns their sum.
+// function sumAll(...Rest_para: number[]){
+//   return  Rest_para.reduce((acc, curr) => acc + curr, 0);
+// };
+// let result = sumAll(1, 2, 3);
+// console.log(result);  // output 6
+// Note
+// is reduce method mein hamne 2 parameter bnaye jin mein se (acc) parameter ko 0, ki value assign kardi or
+// jo (curr) hai wo array mein se aik aik kar ke new value leta hai jisme se aik value wo apne andar rakhta hai or
+// dosri value acc mein rakhta hai phir un values ko apas mein sum karta rehta hai or single sum ki value return 
+// kar rha hai 
+// <-------------------------------------------------End---------------------------------------------------->
+// 5. Returning another function
+// Create a function multiplier that takes a number as its argument and returns another function. 
+// The returned function should take a single number as its argument and return the product of its 
+// argument and tha argument of the first function.
+function multiplier() { }
+multiplier(3);
+export {};
