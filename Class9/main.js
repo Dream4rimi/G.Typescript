@@ -5,15 +5,16 @@
 // 5_ object in object values acces in 2 way
 // 6_ type Alias
 // 7_ object pass in function and then function pass in array
-// 8_ aik student details ka object bnana hai phir aik function create karna hai jiske andar 
-// ham object ko pass krwaenge Main data base mein or iske andar adding delete rename replace ke option bhi moujod ho 
-// self check quiz using inquirer
+// 8_ type ID = string | number;
+// 9_ self check quiz using inquirer
 // Home work assigment start
 // // Basic function creation
 // 1. Using default parameter
 // 2. Using default parameter
 // 3. Arrow function conversion
 // 4. Implementing a Rest parameter
+// 9_ aik student details ka object bnana hai phir aik function create karna hai jiske andar 
+// ham object ko pass krwaenge Main data base mein or iske andar adding delete rename replace ke option bhi moujod ho 
 // <-------------------------------------------------End---------------------------------------------------->
 // forEach or map mein kya defrence hai ?
 // Typescript mein forEach or map 2no methods arrays ke saath istemal kiye jaate hain jo array mein se har value ko 
@@ -26,19 +27,16 @@
 // example 1
 // let legends: string[] = ["shoaib", "arshad", "asif"];
 // legends.forEach((item) => console.log( `He is Rich ${item}`))  // working
-// <-------------------------------------------------End---------------------------------------------------->
 // // example 2
 // let legends: string[] = ["shoaib", "arshad", "asif"];
 // let main = legends.forEach((item) => `The great ${item}`)  
 // console.log(main);  // undefined
-// <-------------------------------------------------End---------------------------------------------------->
 // example 3
 // let legends: string[] = ["shoaib", "arshad", "asif"];
 // let main = legends.forEach((item) => {
 //    return `The great ${item}`
 // })  
 // console.log(main);  // undefined
-// <-------------------------------------------------End---------------------------------------------------->
 // <-------------------------------------------------End---------------------------------------------------->
 // forEach or map mein kya defrence hai ?
 // map():
@@ -77,8 +75,9 @@
 // main.map((item) => console.log(item)) // working in seperate line
 // <-------------------------------------------------End---------------------------------------------------->
 // length
-// ye method agr veriable pe apply kiyya jaye to to ye us veriable ke charecters ko count kar ke dega.
-// lekin agr ye method array par apply kiyya jaye to ye array ke elements ko counts kar ke dega charecters ko nahi
+// ye method agr veriable pe apply kiyya jaye to to ye us veriable ke charecters or spaces ko count kar ke dega
+// lekin agr ye method array par apply kiyya jaye to ye array ke elements ko counts kar ke dega charecters ko nahi 
+// or ye aik new veriable mein unka total return karega.
 // example 1
 // let para = "my name is shoaib";
 // console.log(para.length)  // output 17
@@ -89,7 +88,7 @@
 //split()
 // ye method aik string ko alag-alag parts mein torrne ke liye istemal hota hai Jab ham split() ko kisi string par
 // call karte hain or usmein aik delimiter specify karte hain matlab split(" ") comma ke beech space dety hain. 
-// to string us delimiter ke hisab se tukron mein divide ho jata hai air ek array mein convert ho jata hai.
+// to string us delimiter ke hisab se tukron mein divide ho jata hai air aik array mein convert ho jata hai.
 // agr ham comma ke beech space nahi dengy to split ka method string ke har aik charecter ko alag alag kar dega..
 // example 1
 // let myRoutine = "My name is shoaib and i am student of Governer sindh IT initiative";
@@ -258,9 +257,9 @@
 // <-------------------------------------------------End---------------------------------------------------->
 // Type alias
 // ye aik custom data type hoti hai jise ham object ke liye tayyar karte hain (type) ke zariye.
-// Type alias ka istemal repetitive code ka kam karne ke liye or code ko reusable banane ke liye hota hai. 
+// Type alias ka istemal repetive code ka kam karne ke liye or code ko reusable banane ke liye hota hai. 
 // Agar ham aik data type ko multiple jaghon par istemal karna chahty hain to tab hamy us data ko aik bar 
-// type alias mein define karke rakh lena hai or phir jahan chahy us data type ko assign kar ke use kar lena hai.
+// type alias mein define karke rakh lety hain or phir jahan chahy us data type ko assign kar ke use kar letay hain.
 // ye jo type ham bana rhy hain isy hi type alias kehty hain
 // type user = {
 //     name: string,
@@ -311,105 +310,6 @@
 // isme ${obj} mein object ki key value store hoti hain or isme ${object_values[obj]} object ki corresponding key value 
 // hoti hai isliye jab ham console mein dono ko print krwaty hain to key value ke sath uski corresponding value
 // bhi print ho jati hai aik sath...
-// <-------------------------------------------------End---------------------------------------------------->
-// project
-// aik student details ka object bnana hai phir aik function create karna hai jiske andar 
-// ham object ko pass krwaenge Main data base mein or iske andar adding, delete, rename, replace, ke option bhi moujod ho.
-// import inquirer from 'inquirer'
-// // main data base everything store in 
-// let Data_Base = [];
-// let checker = []
-// // Asking questions from User and store it in object
-// let Student_details = await inquirer.prompt(
-//     [
-//         {
-//             name: "name",
-//             message: "What is your name?",
-//             type: "string"
-//         },
-//         {
-//             name: "father",
-//             message: "What is your father name?",
-//             type: "string"
-//         },
-//         {
-//             name: "age",
-//             message: "What is your age?",
-//             type: "number"
-//         },
-//         {
-//             name: "course",
-//             message: "What course are you pursuing?",
-//             type: "string"
-//         },
-//         {
-//             name: "location",
-//             message: "Are you studying onsite or offline?",
-//             type: "checkbox",
-//             choices: [{name: "Onsite", value: "Onsite"},{name: "Offline", value: "Offline"} ]
-//             // choices: ["Onsite", "Offline"]
-//         }
-//     ]
-// );
-// // function that accepting object argument from object
-// function data_pass(object_values: { [key: string]: any }){
-//     for(let data in object_values){
-//         console.log(`${data}: ${object_values[data]}`)
-//     }
-//     // Data_Base.push(New_data);
-//     return object_values
-// }
-// let print = data_pass(Student_details); // retun object in veriable
-// Data_Base.push(print);
-// console.log(Data_Base); // Main data list print
-// // yahn ham main data base ki list mein changes kar rhy hain
-// let modification = await inquirer.prompt(
-//     [
-//         {
-//             name: "ask",
-//             message: "Do you want to change anything?",
-//             type: "confirm",
-//             default: "false"
-//         }
-//     ]
-// );
-// // agr user ne changes karnay chahy to uske liye ye list show hogi
-// if(modification.ask === true){
-//     let user_yes = await inquirer.prompt([
-//         {
-//             name: "modi",
-//             message: "Please choose your option",
-//             type: "list",
-//             choices: ["Add", "Delete", "Rename", "Replace"]
-//         }
-//     ]);
-// //  Add ki statment
-//     if(user_yes.modi === "Add"){
-//       let adding = await inquirer.prompt(
-//             {
-//                 name: "add",
-//                 message: "What you want to add in your list?",
-//                 type: "input"
-//             }
-//         )
-//         if(adding.add !== ""){
-//             checker.push(adding.add)
-//             console.log(Data_Base); // Main data list print
-//             console.log("Your input list", checker)
-//         };
-//     };
-// // Delete ki statment
-//     if(user_yes.modi === "Delete"){
-//         let del = await inquirer.prompt([
-//             {
-//                 name: "delete",
-//                 message: "What you want to delete?",
-//                 type: "list",
-//                 choices: Data_Base
-//             }
-//         ]);
-//     }
-// }
 // <-------------------------------------------------End---------------------------------------------------->
 // self check quiz using inquirer
 // import inquirer from 'inquirer'
@@ -475,6 +375,146 @@
 // Create a function multiplier that takes a number as its argument and returns another function. 
 // The returned function should take a single number as its argument and return the product of its 
 // argument and tha argument of the first function.
-function multiplier() { }
-multiplier(3);
-export {};
+// function multiplier(){}
+// multiplier(3)
+// <-------------------------------------------------End---------------------------------------------------->
+// project
+// aik student details ka object bnana hai phir aik function create karna hai jiske andar 
+// ham object ko pass krwaenge Main data base mein or iske andar adding, delete, rename, replace, ke option bhi moujod ho.
+import inquirer from 'inquirer';
+// // main data base everything store in 
+let Data_Base = [];
+let checker = [];
+// Asking questions from User and store it in object
+let Student_details = await inquirer.prompt([
+    {
+        name: "name",
+        message: "What is your name?",
+        type: "string"
+    },
+    {
+        name: "father",
+        message: "What is your father name?",
+        type: "string"
+    },
+    {
+        name: "age",
+        message: "What is your age?",
+        type: "number"
+    },
+    {
+        name: "course",
+        message: "What course are you pursuing?",
+        type: "string"
+    },
+    {
+        name: "location",
+        message: "Are you studying onsite or offline?",
+        type: "checkbox",
+        choices: [{ name: "Onsite", value: "Onsite" }, { name: "Offline", value: "Offline" }]
+        // choices: ["Onsite", "Offline"]
+    }
+]);
+// function that accepting object argument from object
+function data_pass(object_values) {
+    for (let data in object_values) {
+        console.log(`${data}`);
+    }
+    // Data_Base.push(New_data);
+    return object_values;
+}
+let print = data_pass(Student_details); // retun object in veriable
+Data_Base.push(print);
+console.log(Data_Base); // Main data list print
+// yahn ham main data base ki list mein changes kar rhy hain
+let modification = await inquirer.prompt([
+    {
+        name: "ask",
+        message: "Do you want to change anything?",
+        type: "confirm",
+        default: "false"
+    }
+]);
+// agr user ne changes karnay chahy to uske liye ye list show hogi
+if (modification.ask === true) {
+    let user_yes = await inquirer.prompt([
+        {
+            name: "modi",
+            message: "Please choose your option",
+            type: "list",
+            choices: ["Add", "Delete", "Rename", "Replace"]
+        }
+    ]);
+    //  Add ki statment
+    if (user_yes.modi === "Add") {
+        let adding = await inquirer.prompt({
+            name: "add",
+            message: "What you want to add in your list?",
+            type: "input"
+        });
+        if (adding.add !== "") {
+            checker.push(adding.add);
+            console.log(Data_Base); // Main data list print
+            console.log("Your input list", checker);
+        }
+        ;
+    }
+    ;
+    // Delete ki statment
+    if (user_yes.modi === "Delete") {
+        let del = await inquirer.prompt([
+            {
+                name: "delete",
+                message: "What you want to delete?",
+                type: "list",
+                choices: Data_Base
+            }
+        ]);
+        let deleting_val = Data_Base.indexOf(del.delete);
+        if (deleting_val >= 0) {
+            Data_Base.splice(deleting_val, 1);
+            console.log(`Your deleted value: ${deleting_val}`);
+            console.log(`Your final list after delete ${Data_Base}`);
+        }
+    }
+    ;
+    // Rename ki statment
+    if (user_yes.modi === "Rename") {
+        let reni = await inquirer.prompt([
+            {
+                name: "rename",
+                message: "Select the item you want to rename",
+                type: "list",
+                choices: Data_Base
+            },
+            {
+                name: "put",
+                message: "Enter the new name for rename",
+                type: "input"
+            }
+        ]);
+        let renam_val = Data_Base.indexOf(reni.rename);
+        Data_Base[renam_val] = reni.put;
+        console.log(`This is your list after Rename ${Data_Base}`);
+    }
+    ;
+    // Replace statment
+    if (user_yes.modi === "Replace") {
+        let replo = await inquirer.prompt([
+            {
+                name: "rep",
+                message: "Select the item you want to rename",
+                type: "list",
+                choices: Data_Base
+            },
+            {
+                name: "puting",
+                message: "Enter the new name for rename",
+                type: "input"
+            }
+        ]);
+        let replace_val = Data_Base.indexOf(replo.rep);
+        Data_Base[replace_val] = replo.puting;
+        console.log(`This is your list after Replace ${Data_Base}`);
+    }
+}
