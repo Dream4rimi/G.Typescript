@@ -1,0 +1,20 @@
+{
+  "name": "prectice__sheet",
+  "version": "1.0.0",
+  "description": "This is may calculater prectice sheet",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shoaib",
+  "license": "MIT",
+  "keywords": [],
+  "devDependencies": {
+    "@types/inquirer": "^9.0.7",
+    "@types/node": "^20.12.2"
+  },
+  "dependencies": {
+    "inquirer": "^9.2.17"
+  }
+}
