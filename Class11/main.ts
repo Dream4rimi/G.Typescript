@@ -1,4 +1,3 @@
-
 // Complete Employee Management System
 // Requirements:
 // 1) Use the same codebase where I left.        //  from Sir Anas
@@ -150,38 +149,49 @@ async function DeleteEmployee(){
 
 // yahn se ham update employee ki details bnana shuro karenge
 async function UpdateEmployee() {
-  
-  let Update_Choose = await inquirer.prompt(
-    {
-      name: "info",
-      message: "Please enter Employee ID to Update",
-      type: "list",
-      choices: Employee_Data_Base
-    },
-
-  );
-
-
-  let Updated_data = await inquirer.prompt([
-    {
-      name: "name",
-      message: "Please enter Employee name",
-      type: "input"
-    },
+  let employee = await inquirer.prompt([
     {
       name: "id",
-      message: "Please enter Employee ID",
-      type: "number"
+      message: "Please enter Employee ID to Update",
+      type: "number",
     },
-    {
-      name: "salary",
-      message: "Please enter Employee salary",
-      type: "number"
-    }
   ]);
 
+  let employeeToUpdate = Employee_Data_Base.find((item) => item.id === employee.id);
 
-  // Employee_Data_Base.filter((item) => item.id === Update_Choose.info   Employee_Data_Base = Updated_data)
+  if (employeeToUpdate) {
+    let Updated_data = await inquirer.prompt([
+      {
+        name: "name",
+        message: "Please enter new Employee name",
+        type: "input",
+      },
+      {
+        name: "id",
+        message: "Please enter new Employee ID",
+        type: "number",
+      },
+      {
+        name: "salary",
+        message: "Please enter new Employee salary",
+        type: "number",
+      },
+    ]);
 
+    employeeToUpdate.name = Updated_data.name;
+    employeeToUpdate.id = Updated_data.id;
+    employeeToUpdate.salary = Updated_data.salary;
 
+    console.log("\n");
+    console.log(chalk.green("******** Employee Updated Successfully ********"));
+    console.log("\n");
+  } else {
+    console.log(chalk.red("Employee ID not found!"));
+    console.log("\n");
+  }
+
+  Management_system();
 }
+
+// Start the management system
+Management_system();
