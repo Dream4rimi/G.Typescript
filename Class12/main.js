@@ -10,10 +10,10 @@
 // enum
 // class
 // Oops
-import { error } from "console";
+// object oriented full program
 // <--------------------------------------END--------------------------------------->
 // module example 1
-// function 1
+//  function 1
 // export function City_country(City: string, Country: string):string {
 //     return `${City} is in ${Country}`
 //  };
@@ -120,7 +120,7 @@ import { error } from "console";
 // console.log(b); // first ye prnit kiyya jaega
 // a = 10;
 //  output 2
-//         10
+//         1
 // (a) ki value 1 hai but jab aik second ka time lagega (a) ki value exicute hony mein tab tak vs code (b) ki value 
 // print kar ke (a) ki dosri neechy wali value parh lega or uski jo value define hogi usy print kar dega...  
 // <--------------------------------------------END------------------------------------------------->
@@ -200,9 +200,12 @@ import { error } from "console";
 //  console print krwa diyya phir last mein 5 ka console print krwa diyya kiyun ke isme ziyada der lag rhi thi 
 // <--------------------------------------------END------------------------------------------------->
 // Promises
-// Promises JavaScript mein asynchronous operations ko handle karne ka aik tareeqa hain. Ye aik object hai jo future 
-// mein kisi value ko represent karta hai. Promises ko use karke ham asynchronous operations ko easily manage or handle
-// kar sakte hain.
+// Promises JavaScript mein asynchronous operations ko handle karne ke liye use kiyye jate hain. Ye a future mein kisi
+// value ko represent karty hain. Promises ke andar 2 resolve aur reject functions define karte hain 
+// Agar operation successful ho to resolve call hota hai or Agar operation fail ho to reject call hota hai.
+// .then method resolve hone ke baad execute hota hai or uske result ko handle karta hai.
+// .catch method reject hone ke baad execute hota hai or error ko handle karta hai.
+// .finally method dono cases mein execute hota hai chahy promise resolve ho ya reject....
 // Asynchronous Code?
 // JavaScript ek single-threaded language hai, matlab ek waqt mein sirf ek hi kaam execute kar sakti hai. 
 // Agar hum synchronous (blocking) code likhte hain jo time-consuming hai, toh wo baaki ke code ko rok deta hai jab tak
@@ -220,86 +223,87 @@ function delay(milliseconds) {
         }, milliseconds);
     });
 }
+export {};
 //Using `then`, `catch`, and `finally`:
-delay(1000)
-    .then(() => {
-    console.log('the delay is over');
-})
-    .catch((error) => {
-    console.log("Somthing went wrong", error);
-})
-    .finally(() => {
-    console.log("this is always executed");
-});
-//Using `async/await`:  
-try {
-    await delay(1000);
-    console.log("Await: The delay is over");
-}
-catch (erorr) {
-    console.error("Await: somthing went wrong", error);
-}
-finally {
-    console.log("Await: This is always executed");
-}
+// delay(1000)
+//           .then(() => {
+//             console.log('the delay is over')
+//           })
+//           .catch((error) => {
+//             console.log("Somthing went wrong", error)
+//           })
+//           .finally(() => {
+//             console.log("this is always executed")
+//           })
+// //Using `async/await`:  
+// try {
+//     await delay(1000);
+//     console.log("Await: The delay is over");
+//   }
+//   catch (erorr) {
+//     console.error("Await: somthing went wrong", error);
+//   }
+//   finally {
+//     console.log("Await: This is always executed")
+//   }
 //Now Do Coding from the following Article
 //https://blog.logrocket.com/async-await-in-typescript/
 //Review the tutorial and convert the code in TypeScript
 //https://www.codingame.com/playgrounds/347/javascript-promises-mastering-the-asynchronous/what-is-asynchronous-in-javascript  
 // <--------------------------------------------END------------------------------------------------->
 // Promises example 2
-let myPromis = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        let succes = true;
-        if (succes) {
-            resolve("Operation is Succesfull");
-        }
-        else {
-            reject("Opeartion is failed");
-        }
-    }, 2000); // 2 second
-});
-// yahn promise ko use kar rhy hain...
-myPromis
-    .then((result) => {
-    console.log(result); //  Output Operation is Succesfull
-})
-    .catch((error) => {
-    console.log(error);
-});
+// let myPromis = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         let succes = true;
+//         if (succes){
+//             resolve("Operation is Succesfull");
+//         }
+//         else {
+//             reject("Opeartion is failed")
+//         }
+//     }, 2000); // 2 second
+// });
+// // yahn promise ko use kar rhy hain...
+// myPromis
+//        .then((result) => {
+//         console.log(result);    //  Output Operation is Succesfull
+//        })
+//        .catch((error) => {
+//         console.log(error);
+//        })
 // <--------------------------------------------END------------------------------------------------->
 // Promises example 3
-function fetchData() {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            let data = { id: 1, name: "Shoaib khan" };
-            resolve(data);
-        }, 3000); // 3een second
-    });
-}
-fetchData()
-    .then((data) => {
-    console.log("data fetch data ", data);
-})
-    .catch((erorr) => {
-    console.log("Erorr ", erorr);
-});
+// function fetchData(){
+//   return  new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             let data = {id: 1, name: "Shoaib khan"};
+//             resolve(data);
+//         }, 3000); // 3een second
+//     });
+// }
+// fetchData()
+//           .then((data) => {
+//             console.log("data fetch data ", data)
+//           })
+//           .catch((erorr) => {
+//             console.log("Erorr ", erorr);
+//           })
 // <--------------------------------------------END------------------------------------------------->
 // Promises example 4
-function der_kardi(second) {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve(`apke message ka ${second} millisecond tak wait kiyya maine`);
-        }, second);
-    });
-}
-der_kardi(2000)
-    .then((message) => {
-    console.log(message);
-})
-    .catch((erorr) => {
-    console.log(erorr);
-});
+// function der_kardi(second: number){
+//    return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             resolve(`apke message ka ${second} millisecond tak wait kiyya maine`)
+//         }, second);
+//     })
+// }
+// der_kardi(2000)
+//               .then((message) => {
+//                 console.log(message)
+//               })
+//               .catch((erorr) => {
+//                 console.log(erorr)
+//               })
 // Promises Ko Kaha Use Karein?
 // Data fetching from a server (API calls)
 // File reading/writing

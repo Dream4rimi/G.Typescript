@@ -1,7 +1,7 @@
 {
-  "name": "class12",
+  "name": "class13",
   "version": "1.0.0",
-  "description": "mai nahi btao ga",
+  "description": "",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -11,9 +11,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^20.13.0"
-  },
-  "dependencies": {
-    "cli-table3": "^0.6.5"
+    "@types/node": "^20.14.8"
   }
 }

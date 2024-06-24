@@ -10,19 +10,19 @@
 // enum
 // class
 // Oops
+// object oriented full program
 
 import { error } from "console";
-import { promises } from "dns";
 
 
 
 
 // <--------------------------------------END--------------------------------------->
-
 // module example 1
 
 
-// function 1
+//  function 1
+
 // export function City_country(City: string, Country: string):string {
 //     return `${City} is in ${Country}`
 //  };
@@ -191,7 +191,9 @@ import { promises } from "dns";
 // let b: number = 2;
 
 // setTimeout(function () {
+                                                                     
 
+                                                       
 //    console.log(a);       // second ye print kiyya jaega  
 // }, 1000);
 
@@ -200,7 +202,7 @@ import { promises } from "dns";
 // a = 10;
 
 //  output 2
-//         10
+//         1
 
 
 // (a) ki value 1 hai but jab aik second ka time lagega (a) ki value exicute hony mein tab tak vs code (b) ki value 
@@ -316,9 +318,14 @@ import { promises } from "dns";
  // <--------------------------------------------END------------------------------------------------->
  // Promises
 
-// Promises JavaScript mein asynchronous operations ko handle karne ka aik tareeqa hain. Ye aik object hai jo future 
-// mein kisi value ko represent karta hai. Promises ko use karke ham asynchronous operations ko easily manage or handle
-// kar sakte hain.
+// Promises JavaScript mein asynchronous operations ko handle karne ke liye use kiyye jate hain. Ye a future mein kisi
+// value ko represent karty hain. Promises ke andar 2 resolve aur reject functions define karte hain 
+// Agar operation successful ho to resolve call hota hai or Agar operation fail ho to reject call hota hai.
+// .then method resolve hone ke baad execute hota hai or uske result ko handle karta hai.
+// .catch method reject hone ke baad execute hota hai or error ko handle karta hai.
+// .finally method dono cases mein execute hota hai chahy promise resolve ho ya reject....
+
+
 
 // Asynchronous Code?
 // JavaScript ek single-threaded language hai, matlab ek waqt mein sirf ek hi kaam execute kar sakti hai. 
@@ -337,50 +344,53 @@ import { promises } from "dns";
 // Promises example 1
 
 
-function delay(milliseconds: number): Promise<void> {
+// function delay(milliseconds: number): Promise<void> {
 
-   return new Promise((resolve) => {
+//    return new Promise((resolve) => {
 
-        setTimeout(() => {
-            resolve();
-        }, milliseconds)
+//         setTimeout(() => {
 
-    })
+//             resolve();
+            
+//         }, milliseconds)
 
-}
+//     })
+
+// }
 
 
 //Using `then`, `catch`, and `finally`:
-delay(1000)
 
-          .then(() => {
-            console.log('the delay is over')
-          })
+// delay(1000)
 
-          .catch((error) => {
-            console.log("Somthing went wrong", error)
-          })
+//           .then(() => {
+//             console.log('the delay is over')
+//           })
 
-          .finally(() => {
-            console.log("this is always executed")
-          })
+//           .catch((error) => {
+//             console.log("Somthing went wrong", error)
+//           })
+
+//           .finally(() => {
+//             console.log("this is always executed")
+//           })
 
 
 
-//Using `async/await`:  
-try {
+// //Using `async/await`:  
+// try {
 
-    await delay(1000);
-    console.log("Await: The delay is over");
-  }
+//     await delay(1000);
+//     console.log("Await: The delay is over");
+//   }
 
-  catch (erorr) {
-    console.error("Await: somthing went wrong", error);
-  }
+//   catch (erorr) {
+//     console.error("Await: somthing went wrong", error);
+//   }
 
-  finally {
-    console.log("Await: This is always executed")
-  }
+//   finally {
+//     console.log("Await: This is always executed")
+//   }
 
 
   //Now Do Coding from the following Article
@@ -396,63 +406,63 @@ try {
 // Promises example 2
 
 
-let myPromis = new Promise((resolve, reject) => {
+// let myPromis = new Promise((resolve, reject) => {
  
-    setTimeout(() => {
-        let succes = true;
+//     setTimeout(() => {
+//         let succes = true;
 
-        if (succes){
-            resolve("Operation is Succesfull");
-        }
-        else {
-            reject("Opeartion is failed")
-        }
-    }, 2000); // 2 second
+//         if (succes){
+//             resolve("Operation is Succesfull");
+//         }
+//         else {
+//             reject("Opeartion is failed")
+//         }
+//     }, 2000); // 2 second
 
-});
+// });
 
-// yahn promise ko use kar rhy hain...
-myPromis
+// // yahn promise ko use kar rhy hain...
+// myPromis
 
-       .then((result) => {
-        console.log(result);    //  Output Operation is Succesfull
-       })
+//        .then((result) => {
+//         console.log(result);    //  Output Operation is Succesfull
+//        })
 
-       .catch((error) => {
-        console.log(error);
-       })
+//        .catch((error) => {
+//         console.log(error);
+//        })
 
 
 // <--------------------------------------------END------------------------------------------------->
 // Promises example 3
 
 
-function fetchData(){
+// function fetchData(){
 
-  return  new Promise((resolve, reject) => {
+//   return  new Promise((resolve, reject) => {
 
-        setTimeout(() => {
+//         setTimeout(() => {
 
-            let data = {id: 1, name: "Shoaib khan"};
+//             let data = {id: 1, name: "Shoaib khan"};
 
-            resolve(data);
+//             resolve(data);
 
-        }, 3000); // 3een second
+//         }, 3000); // 3een second
 
-    });
+//     });
 
-}
+// }
 
 
-fetchData()
+// fetchData()
 
-          .then((data) => {
-            console.log("data fetch data ", data)
-          })
+//           .then((data) => {
+//             console.log("data fetch data ", data)
+//           })
 
-          .catch((erorr) => {
-            console.log("Erorr ", erorr);
-          })
+//           .catch((erorr) => {
+//             console.log("Erorr ", erorr);
+//           })
 
 
 
@@ -461,27 +471,27 @@ fetchData()
 // Promises example 4
 
 
-function der_kardi(second: number){
+// function der_kardi(second: number){
 
-   return new Promise((resolve, reject) => {
-        setTimeout(() => {
+//    return new Promise((resolve, reject) => {
+//         setTimeout(() => {
             
-            resolve(`apke message ka ${second} millisecond tak wait kiyya maine`)
+//             resolve(`apke message ka ${second} millisecond tak wait kiyya maine`)
 
-        }, second);
-    })
-}
+//         }, second);
+//     })
+// }
 
 
-der_kardi(2000)
+// der_kardi(2000)
 
-              .then((message) => {
-                console.log(message)
-              })
+//               .then((message) => {
+//                 console.log(message)
+//               })
 
-              .catch((erorr) => {
-                console.log(erorr)
-              })
+//               .catch((erorr) => {
+//                 console.log(erorr)
+//               })
 
 
 
@@ -525,31 +535,32 @@ der_kardi(2000)
 // Example using fetch() to get data from an API
 
 // Function to fetch data from a sample API
-// async function fetchData() {
-//     try {
 
-//       // Sending GET request to the API
-//       let response = await fetch('https://jsonplaceholder.typicode.com/posts');
+async function fetchData() {
+    try {
+
+      // Sending GET request to the API
+      let response = await fetch('https://jsonplaceholder.typicode.com/posts');
       
-//       // Checking if the response is OK
-//       if (response.ok) {
-//         // Parsing the JSON data from the response
-//         let data = await response.json();
-//         console.log('Fetched Data:', data);
-//       } else {
-//         // If response is not OK, logging the error status
-//         console.log('Error: ', response.status);
-//       }
+      // Checking if the response is OK
+      if (response.ok) {
+        // Parsing the JSON data from the response
+        let data = await response.json();
+        console.log('Fetched Data:', data);
+      } else {
+        // If response is not OK, logging the error status
+        console.log('Error: ', response.status);
+      }
 
-//     } 
+    } 
 
 
-//     catch (error) {
-//       // Logging any network errors
-//       console.log('Network Error: ', error);
-//     }
-//   }
+    catch (error) {
+      // Logging any network errors
+      console.log('Network Error: ', error);
+    }
+  }
   
-//   // Calling the function to fetch data
-//   fetchData();
+  // Calling the function to fetch data
+  fetchData();
   
