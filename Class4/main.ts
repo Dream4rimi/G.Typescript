@@ -7,16 +7,16 @@
 
 
 
-// // normal array 
-// let personN: string[] = ["Shoaib", "Age", 23, "city"]                 // type error
+// normal array 
+let personN: string[] = ["Shoaib", "Age", 23, "city"]             // type error
 
-// // define mix array
-// let person2: (string | number)[] = ["Shoaib", "Age", 23, "city"]       // working
+// define mix array
+let person2: (string | number)[] = ["Shoaib", "Age", 23, "city"]       // working
 
 
-// let array: (string | number | boolean)[] = ["shoaib", "asif", 23, true, "ahsan", "baloch"];
+let array: (string | number | boolean)[] = ["shoaib", "asif", 23, true, "ahsan", "baloch"];
 
-// console.log(array)  // working
+console.log(array)  // working
 
 // <------------------------------------------End------------------------------------------------>
 
@@ -27,35 +27,35 @@
 // koi dosri data types enter karega to usy error milega kiyun ke ham ne already
 // data types person interface mein bata rakhi hain....
 
-// interface person {
-//     name: string,
-//     age: number,
-//     student: true,
-//     natinality: string,
-// }
+interface person {
+    name: string,
+    age: number,
+    student: true,
+    natinality: string,
+}
 
 
-// // ye user ka input hai agr wo name mein (string) data type hi dalega to acces hoga warna nahi
-// // ya phir (age) number hi dalega tab hi program chalega warna isme koi dosri value pass nahi kar sakta user....
+// ye user ka input hai agr wo name mein (string) data type hi dalega to acces hoga warna nahi
+// ya phir (age) number hi dalega tab hi program chalega warna isme koi dosri value pass nahi kar sakta user....
 
-// let person: person = {  // isme interface mein jis naam ki data type creat karenge usy yahn assign karne parega
-//     name: 'shoaib',  // in dono ko key value paires kaha jata hai
-//     age: 23,
-//     student: true,
-//     natinality: 'pakistan', 
-// }
+let person: person = {  // isme interface mein jis naam ki data type creat karenge usy yahn assign karne parega
+    name: 'shoaib',  // in dono ko key value paires kaha jata hai
+    age: 23,
+    student: true,
+    natinality: 'pakistan', 
+}
 
-// console.log(person);
+console.log(person);
 
 // // <------------------------------------------End------------------------------------------------>
 // ibm calculater
 
 
-// let weight = 70;
-// let height = 1.75;
+let weight = 70;
+let height = 1.75;
 
-// let ibm: number = weight / (height * height);
-// console.log("Your BMI is:", ibm); 
+let ibm: number = weight / (height * height);
+console.log("Your BMI is:", ibm); 
 
 
 // // <------------------------------------------End------------------------------------------------>

@@ -4,28 +4,26 @@
 // [+-*/] Combining operater BODMAS rules... learn
 // Addition Calculater
 // BMI Calculater = (Body Mass Index)
-// Home Work > Addition, Subtraction, Multiplication, Devision, Exponentiation, 
-// Modulud, and BMI calculater using inquirer
-// [+-] Assigment operaters 
+// [+= -=] Assigment operaters 
 // [== != > <] Comparisson operaters 
 // [ && || ! ] Logical operaters
 // <-------------------------------------------END------------------------------------------->
 // [**] Exponentiation power operater
 // Exponentiation power operator (**) 2 numbers ko mathematical operations mein use karke
 // aik number ko doosre number ki power mein raise karta hai. Iska introduction ES2016 (ES7) mein hua tha.
-// let layer = 5;
-// let apple= 5;
-// let power = layer ** 2;
-// console.log(power);   // output 25
+let layer = 5;
+let apple = 5;
+let power = layer ** 2;
+console.log(power); // output 25
 // is quetion mein 5 ko khud 5 se multiply kiyya hai kiyun ke ye quetion aik squire hai 
 // matlab iski layer mein bhi 5 apples hain or layers ki line bhi 5 hain....
-// console.log( 3 ** 4); // output 81
+console.log(3 ** 4); // output 81
 // is question mein ham 3 ko 4 ki power mein rise karna chah rhy hain
 // isko kuch is tarhn solve karna hoga 3 ko 4 dafa khud se multiply karna hoga
 // 3 * 3 * 3  * 3
 // 3 * 9 * 27 * 81  // output 81
-// console.log(6 ** 3);      // output 216
-// console.log(6 * 6 * 6);  // output 216
+console.log(6 ** 3); // output 216
+console.log(6 * 6 * 6); // output 216
 // <-------------------------------------------END------------------------------------------->
 // [%] modulus operater
 // modulud operater value ko equally devide karta hai or jo value equally devide nahi ho rhi hoti
@@ -114,52 +112,6 @@
 // let bmi = weightInKg / (heightInMeters * heightInMeters);
 // console.log(`Your BMI is ${bmi}`);
 // console.log(70 / 1.75 * 1.75);
-// <-------------------------------------------END------------------------------------------->
-// Home Work > Addition, Subtraction, Multiplication, Devision, Exponentiation, 
-// Modulud, and BMI calculater using inquirer
-// import inquirer from "inquirer";
-// let lamboCalcu = await inquirer.prompt([
-//     {
-//         name: "q1",
-//         message: "Enter your first number:",
-//         type: "number"
-//     },
-//     {
-//         name: "q2",
-//         message: "Enter your second number:",
-//         type: "number"
-//     },
-//     {
-//         name: "op",
-//         message: "Please select operater to perform opration:",
-//         type: "list",
-//         choices: ["Addition", "Subtraction", "Multiplication", "Devision", "Exponentiation", "Modulus"]
-//     }
-// ]);
-// if(lamboCalcu.op === "Addition"){
-//    let final: number = lamboCalcu.q1 + lamboCalcu.q2;
-//    console.log("Your Result: " + final);
-// }
-// else if(lamboCalcu.op === "Subtraction"){
-//     let final: number = lamboCalcu.q1 - lamboCalcu.q2;
-//     console.log("Your Result: " + final);
-// }
-// else if(lamboCalcu.op === "Multiplication"){
-//     let final: number = lamboCalcu.q1 * lamboCalcu.q2;
-//     console.log("Your Result: " + final);
-// }
-// else if(lamboCalcu.op === "Devision"){
-//     let final: number = lamboCalcu.q1 / lamboCalcu.q2;
-//     console.log("Your Result: " + final);
-// }
-// else if(lamboCalcu.op === "Exponentiation"){
-//     let final: number = lamboCalcu.q1 ** lamboCalcu.q2;
-//     console.log("Your Result: " + final);
-// }
-// else if(lamboCalcu.op === "Modulus"){
-//     let final: number = lamboCalcu.q1 % lamboCalcu.q2;
-//     console.log("Your Result: " + final);
-// }
 // <-------------------------------------------END------------------------------------------->
 // // assigment operater +
 // let c: number = 10;

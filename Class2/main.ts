@@ -9,6 +9,8 @@
 // person_name = Snake-Case
 // MyName = Pascal-Case
 
+// <-------------------------------------------END------------------------------------------->
+
 // string 
 let kuchBhi: string = "Farig";
 console.log(kuchBhi);
@@ -22,6 +24,8 @@ console.log(kuchBhi);
 kuchBhi = "Han mai hun Farig Admi";
 console.log(kuchBhi);
 
+
+// <-------------------------------------------END------------------------------------------->
 // Number 
 let number_value: number = 72
 console.log(number_value);
@@ -35,6 +39,8 @@ console.log(number_value);
 number_value = 87
 console.log(number_value);
 
+
+// <-------------------------------------------END------------------------------------------->
 // Boolean 
 let BoolType: boolean = true;
 console.log(BoolType);
@@ -48,6 +54,8 @@ console.log(BoolType);
 BoolType = false;
 console.log(BoolType);
 
+
+// <-------------------------------------------END------------------------------------------->
 // any
 let Any_tp: any = "my name";
 console.log(Any_tp);
