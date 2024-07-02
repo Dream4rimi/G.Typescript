@@ -5,14 +5,12 @@
 // API
 // fetch
 // UI
-// start union lttrals 
-// type alias
-// enum
+// run time envoirment 4 component call stack webApi event loop task Queue
 // class
 // Oops
 // object oriented full program
+// use Aioxs in api
 
-import { error } from "console";
 
 
 
@@ -522,45 +520,238 @@ import { error } from "console";
 
 
 // API ka Use
-// API ko use karne ke liye aap HTTP requests send karte hain aur responses receive karte hain.
+// API ko use karne ke liye ham HTTP requests send karte hain or responses receive karte hain.
 // Commonly used HTTP methods hain:
+
+// API endpoint matlab url ka concept samjhna hai
+// API key websites par sighn in karne ke bad jo API_Key milti hai
+// Token hi milta hai
 
 // GET: Data fetch karne ke liye
 // POST: Naya data create karne ke liye
 // PUT: Existing data update karne ke liye
 // DELETE: Data delete karne ke liye
 
+// examle 1
+
+fetch('https://jsonplaceholder.typicode.com/posts')
+
+.then((response) => {
+   return response.json()
+})
+
+.then((data) => {
+    console.log(data)
+})
+
+.catch((error) => {
+    console.log("Error: ", error)
+})
+ 
+
+// Notes 
+
+// fetch function use karke aik HTTP GET request bhejte hain 
+// fetch aik promise return karta hai jo HTTP response ko represent karta hai.
+
+// Jab fetch request complete hoti jati hai to pehla .then block execute hota hai.
+// response.json() method use kar ke response ko JSON format mein parse karte hain matlab convert karte hain. 
+// Ye method bhi aik promise return karta hai jo parsed JSON data ko handle karta hai.
+
+// Jab JSON data successfully parse ho jata hai tab dusra .then block execute hota hai.
+// console.log(data) statement parsed data ko console mein print karta hai. 
+
+// Agar fetch request ke dauraan koi error ata hai to .catch block execute hota hai
+// console.log('Error:', error) statement error message ko console mein print karta hai.
 
 
-// Example using fetch() to get data from an API
+// Full Flow:
 
-// Function to fetch data from a sample API
-
-async function fetchData() {
-    try {
-
-      // Sending GET request to the API
-      let response = await fetch('https://jsonplaceholder.typicode.com/posts');
-      
-      // Checking if the response is OK
-      if (response.ok) {
-        // Parsing the JSON data from the response
-        let data = await response.json();
-        console.log('Fetched Data:', data);
-      } else {
-        // If response is not OK, logging the error status
-        console.log('Error: ', response.status);
-      }
-
-    } 
+// Request: fetch function server se data request karta hai.
+// Response Parsing: Server se response milne ke baad usy JSON format mein convert karty hain.
+// Data Handling: JSON data ko console mein print karte hain.
+// Error Handling: Agar koi problem hoti hai to usko handle karte hain or error message console mein print karte hain.
 
 
-    catch (error) {
-      // Logging any network errors
-      console.log('Network Error: ', error);
+// <--------------------------------------------END------------------------------------------------->
+ // API: Example 2
+// install - npm install axios
+
+// Axios ek popular JavaScript library hai jo HTTP requests ko handle karne ke liye use hoti hai.
+// Axios ko commonly RESTful APIs ke saath use kiya jata hai.
+
+// Why Use Axios?
+// Axios ka syntax fetch API se zyada readable aur concise hota hai.
+// Axios automatically request bodies aur response data ko JSON format mein handle karta hai
+// Hamen manually JSON.stringify aur response.json() karne ki zarurat nahi hoti.
+// Axios old browsers ke saath bhi compatible hai, jabke fetch API sirf modern browsers mein support hoti hai.
+ 
+
+
+import axios from "axios"
+
+axios.get("https://jsonplaceholder.typicode.com/posts")
+
+.then((response) => {
+    console.log(response.data)
+})
+
+.catch((error) => {
+    console.log("error: ", error)
+});
+
+
+// Notes
+
+// Why we use response with data?
+// Reason 1: Actual Data Access
+// Jab ham server se data lety hain to wo data response.data mein hota hai.
+// Agr ham sirf response print karenge to hamen bohot sara unnecessary extra extra data milega
+
+
+// <--------------------------------------------END------------------------------------------------->
+ // API: Example 3
+  
+
+ async function fetching(){
+
+  try{
+
+ let response = await fetch('https://jsonplaceholder.typicode.com/posts')
+
+ if(response.ok){
+
+ let data = await response.json();
+ console.log("Laya gaya data: ", data);
+ }
+
+ else{
+  console.log("Error hua hai yahn ", response.status);
+ }
+
+}
+
+catch (error){
+  console.log("Network Error: ", error)
+ }
+
+};
+
+fetching();
+
+
+// Notes
+// async function fetching() { ... }
+// async keyword function ko asynchronous banata hai or is mein await keyword use karne ki ijazat deta hai.
+
+//  try { ... } catch (error) { ... }
+// try block ke andar wo code likha jata hai jo errors throw kar sakta hai. Agar koi error ata hai to
+// wo catch block mein catch ho jata hai.
+// Agar try block mein koi error ata hai to control catch block mein chala jata hai.
+
+// let response = await fetch('https://jsonplaceholder.typicode.com/posts');
+// await keyword asynchronous operation ko wait karwany ke liye use hota hai.
+// Jab tak fetch promise resolve yani complete nahi hota tab tak await function ko pause rakhta hai.
+// Agar await use nahi karte to fetch se return hone wala promise ko handle karna mushkil ho jata.
+
+// fetch function:
+// fetch function aik HTTP request bhejta hai specified URL par or aik promise return karta hai jo
+// HTTP response ko represent karta hai.
+
+// response.ok:
+// Agar response status code 200-299 ki range mein ata hai to response.ok true return karta hai.
+// Agar response status code 200-299 ki range ke bahar ata hai to response.ok false return karta hai.
+
+// else block:
+// Agar response.ok false ata hai (matlab response status 200-299 range mein nahi hai) to else block execute hota hai.
+// response.status property response ka status code return karti hai (jaise 404 for Not Found).
+
+// . let data = await response.json();
+// response.json() method fetch se aye huy response ko JSON format mein parse karta hai or aik promise return karta hai.
+// await keyword use kar ke ham is promise ko wait krwaty hain jab tak JSON data resolve (complete) nahi ho jata
+// Agar await use nahi karte to response.json() se return hone waly promise ko handle karna mushkil hota.
+
+// console.log("Laya gaya data: ", data);:
+// console.log function data ko console mein print karta hai take ham dekh saken response se kya data aaya hai. 
+
+// Summary:
+// async keyword: Function ko asynchronous banata hai taake await use kar saken.
+// await keyword: Asynchronous operations ko wait krwany ke liye use hota hai. Without await promises ko handle karna mushkil hota.
+// try block: Un code of lines ko wrap karta hai jo error throw kar sakti hain taake ham errors ko catch or handle kar saken.
+// catch block: Errors ko handle karta hai or program ko crash hone se bachata hai.
+
+
+
+// <--------------------------------------------END------------------------------------------------->
+ // API: Example 4
+  
+
+  const owner = 'octocat'; // GitHub username ya organization
+  const repo = 'Hello-World'; // Repository ka naam
+  const token = 'YOUR-TOKEN'; // Aapka GitHub personal access token
+  
+  const url = `https://api.github.com/repos/${owner}/${repo}/issues`;
+  
+  fetch(url, {
+
+    method: 'GET',
+    headers: {
+      'Accept': 'application/vnd.github+json',
+      'Authorization': `Bearer ${token}`,
+      'X-GitHub-Api-Version': '2022-11-28'
     }
-  }
+
+  })
+
+    .then(response => {
+
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+
+    })
+
+    .then(data => console.log(data))
+    .catch(error => console.error('Error:', error));
   
-  // Calling the function to fetch data
-  fetchData();
   
+  
+  // Headers HTTP requests mein important role play karte hain kyun ke ye client or server ke beech 
+  // information exchange ko control or customize karte hain. Chalo har aik specified header ke bare mein detail se
+  // discuss karte hain
+
+  // 
+  
+  // <--------------------------------------------END------------------------------------------------->
+ // API: Example 5
+
+ fetch("https://www.7timer.info/doc.php?lang=en")
+
+ .then((response) => {
+   
+   const contentType = response.headers.get('content-type');
+
+   if (contentType && contentType.indexOf('application/json') !== -1) {
+
+     return response.json();
+   } 
+   else {
+     return response.text();
+   }
+
+ })
+
+ .then((data) => {
+
+   if (typeof data === 'string') {
+     console.log("Received HTML:", data);
+   }
+    else {
+     console.log("Received JSON:", data);
+   }
+ })
+ 
+ .catch((error) => {
+   console.log("error", error);
+ });
