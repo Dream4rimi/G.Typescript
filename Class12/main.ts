@@ -686,72 +686,111 @@ fetching();
  // API: Example 4
   
 
-  const owner = 'octocat'; // GitHub username ya organization
-  const repo = 'Hello-World'; // Repository ka naam
-  const token = 'YOUR-TOKEN'; // Aapka GitHub personal access token
-  
-  const url = `https://api.github.com/repos/${owner}/${repo}/issues`;
-  
-  fetch(url, {
-
-    method: 'GET',
-    headers: {
-      'Accept': 'application/vnd.github+json',
-      'Authorization': `Bearer ${token}`,
-      'X-GitHub-Api-Version': '2022-11-28'
-    }
-
-  })
-
-    .then(response => {
-
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-      return response.json();
-
-    })
-
-    .then(data => console.log(data))
-    .catch(error => console.error('Error:', error));
-  
-  
-  
-  // Headers HTTP requests mein important role play karte hain kyun ke ye client or server ke beech 
-  // information exchange ko control or customize karte hain. Chalo har aik specified header ke bare mein detail se
-  // discuss karte hain
-
-  // 
-  
-  // <--------------------------------------------END------------------------------------------------->
- // API: Example 5
-
  fetch("https://www.7timer.info/doc.php?lang=en")
 
  .then((response) => {
-   
-   const contentType = response.headers.get('content-type');
-
-   if (contentType && contentType.indexOf('application/json') !== -1) {
-
-     return response.json();
-   } 
-   else {
-     return response.text();
-   }
-
+ 
+    let Con_Data = response.headers.get('content-type')
+ 
+    if(Con_Data && Con_Data.indexOf('application/json') !== -1){
+ 
+    return response.json()
+ 
+    }
+ 
+    else{
+        return response.text()
+    }
+ 
  })
-
+ 
+ 
  .then((data) => {
-
-   if (typeof data === 'string') {
-     console.log("Received HTML:", data);
-   }
-    else {
-     console.log("Received JSON:", data);
-   }
+ 
+     if(typeof data === "string"){
+         console.log("Recieved html Data: ", data)
+     }
+ 
+     else{
+         console.log("Recived Json data:", data)
+     }
+ 
  })
  
  .catch((error) => {
-   console.log("error", error);
- });
+     console.log("Error", error)
+ })
+
+
+
+ // Notes
+
+// response:
+// response: Yeh fetch function ka response object hai. Jab ham fetch request bhejte hain to server se aik response 
+// ata hai jo headers or body contain karta hai.
+
+// response.headers
+// response.headers: Ye response object ki headers property hai. Headers mein metadata hota hai jo request or 
+// response ke bare mein information deta hai ke ye aik Headers object hai.
+
+// Response Headers Kya Hain?
+// Jab ham kisi server se data mangwate hain (e.g., fetch API ka use karke) to server se aik response ata hai.
+// Yeh response do parts mein hota hai:
+// Headers: Yeh metadata hota hai, yani additional information jo response ke baare mein hoti hai.
+// Body: Yeh actual data hota hai jo aapne mangwata hai
+
+// Metadata Kya Hota Hai?
+// Metadata wo information hoti hai jo data ke bare mein hoti hai. Yeh directly data nahi hoti magar data ke 
+// context ya properties ko batati hai.
+
+// Headers Kya Hote Hain?
+// Headers wo additional information hain jo request or response ke sath send ki jati hai. Yeh key-value pairs ki
+// form mein hote hain. Example headers:
+// Content-Type: Data kis format mein hai (e.g., JSON, HTML).
+// Content-Length: Data ka size.
+// Date: Request ya response ka time.
+// Authorization: Authentication information.
+// Cache-Control: Caching policies
+
+// response.headers Ka Matlab
+// Jab ham fetch API ka use karte hain or response milta hai to response.headers response object ka wo part hota hai
+// jo response ke headers ko represent karta hai. 
+
+  // <--------------------------------------------END------------------------------------------------->
+ // API: Example 5
+
+ 
+ const owner = 'octocat'; // GitHub username ya organization
+ const repo = 'Hello-World'; // Repository ka naam
+ const token = 'YOUR-TOKEN'; // Aapka GitHub personal access token
+ 
+ const url = `https://api.github.com/repos/${owner}/${repo}/issues`;
+ 
+ fetch(url, {
+
+   method: 'GET',
+   headers: {
+     'Accept': 'application/vnd.github+json',
+     'Authorization': `Bearer ${token}`,
+     'X-GitHub-Api-Version': '2022-11-28'
+   }
+
+ })
+
+   .then(response => {
+
+     if (!response.ok) {
+       throw new Error('Network response was not ok');
+     }
+     return response.json();
+
+   })
+
+   .then(data => console.log(data))
+   .catch(error => console.error('Error:', error));
+ 
+ 
+ 
+ // Headers HTTP requests mein important role play karte hain kyun ke ye client or server ke beech 
+ // information exchange ko control or customize karte hain. Chalo har aik specified header ke bare mein detail se
+ // discuss karte hain
