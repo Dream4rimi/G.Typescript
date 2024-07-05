@@ -48,23 +48,28 @@ JavaScript se ham browser automation or web scraping.
 JavaScript aik powerful language hai jo web development ko interactive or dynamic bnati hai or Ye har web browser mein run hoti hai or is ke bohot sare use cases hain jaise web development, mobile app development, server-side development, or game development. JavaScript ki bari community or support ki wajah se hamen resources orr help milna Aasaan hota hai.
 
 
+# JavaScript Run-time Environment 4 main Components
+JavaScript run-time environment ke 4 main components hote hain: Call Stack, Asynchronous Callbacks, Task Queue, or Event Loop. In components ka kaam aik sath mil kar JavaScript code ko execute karna hota hai.
+
+### 1. Call Stack
+Call Stack aik data structure hai jo JavaScript code ke function calls ko track karta hai. Jab bhi aik function call hota hai, wo stack mein push ho jata hai, or jab function complete ho jata hai, to wo stack se pop ho jata hai. matlab ke Jab hum kisi cheez ko stack se nikaalte hain to us operation ko "pop" kehte hain.
+
+### 2. Asynchronous Callbacks
+JavaScript mein asynchronous callbacks un functions ko refer karte hain jo kisi asynchronous operation (jaise setTimeout, network request) ke complete hone par execute hoty hain.
+
+### 3. Task Queue
+Task Queue aik queue hai jahan asynchronous callbacks ko place kiya jata hai jab wo ready hote hain. Jab call stack empty hoti hai, event loop task queue se callbacks uthata hai or unko call stack mein push karta hai taake wo execute ho sakein.
+
+### 4.. Event Loop
+Event Loop aik mechanism hai jo continuously check karta hai ke call stack empty hai ya nahi or task queue mein koi pending callback hai ya nahi. Agar call stack empty hota hai or task queue mein koi callback hota hai, to event loop us callback ko call stack mein push kar deta hai taake wo execute ho sake.
 
 
 
-
-
-
-
-
-
-
-
-
-## JavaScript Run-time Environment Kya Hai?
+## JavaScript Run-time Environment Kya Hai in details part 2?
 JavaScript Run-time Environment (JRE) wo environment hota hai jahan JavaScript code execute hota hai. Yeh environment zaroori tools or libraries provide karta hai jo JavaScript code ko run karne or uske operations ko perform karne ke liye chahiye hote hain.
 
 
-## Key Components of JavaScript Run-time Environment
+### Key Components of JavaScript Run-time Environment
 ### JavaScript Engine:
 JavaScript Engine wo software hota hai jo JavaScript code ko execute karta hai. Yeh engine JavaScript code ko machine code (binary code) mein convert karta hai jo computer samajh sakta hai.
 Popular JavaScript engines:
@@ -132,39 +137,4 @@ Node.js ka use kar ke ham IoT devices ke liye applications develop kar sakte hai
 
 ### Summry
 JavaScript Run-time Environment wo infrastructure provide karta hai jahan JavaScript code execute hota hai. Isme JavaScript engine, web APIs, event loop, or callback queue jaise components shamil hote hain. Yeh environment JavaScript ko browsers or server-side applications dono mein run karne ki capability deta hai. Iski cross-platform compatibility or rich set of APIs ki wajah se ye highly versatile or popular hai.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
