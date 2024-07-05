@@ -60,7 +60,7 @@ JavaScript mein asynchronous callbacks un functions ko refer karte hain jo kisi 
 ### 3. Task Queue
 Task Queue aik queue hai jahan asynchronous callbacks ko place kiya jata hai jab wo ready hote hain. Jab call stack empty hoti hai, event loop task queue se callbacks uthata hai or unko call stack mein push karta hai taake wo execute ho sakein.
 
-### 4.. Event Loop
+### 4. Event Loop
 Event Loop aik mechanism hai jo continuously check karta hai ke call stack empty hai ya nahi or task queue mein koi pending callback hai ya nahi. Agar call stack empty hota hai or task queue mein koi callback hota hai, to event loop us callback ko call stack mein push kar deta hai taake wo execute ho sake.
 
 
@@ -84,7 +84,7 @@ Examples:
 2. Fetch API: Network requests send karne ke liye.
 3. Local Storage: Browser mein data store karne ke liye.
 
-### Event Loop:
+### .Event Loop:
 Event loop wo mechanism hai jo asynchronous operations ko handle karta hai. Ye ensures karta hai ke code non-blocking tarike se execute ho. Jab asynchronous operations (jaise network request ya timer) complete hoty hain to event loop callback functions ko queue se uthata hai or unko execute karta hai.
 
 ### Callback Queue:
