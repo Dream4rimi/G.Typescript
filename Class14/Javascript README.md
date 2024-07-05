@@ -47,9 +47,21 @@ JavaScript se ham browser automation or web scraping.
 ### summry
 JavaScript aik powerful language hai jo web development ko interactive or dynamic bnati hai or Ye har web browser mein run hoti hai or is ke bohot sare use cases hain jaise web development, mobile app development, server-side development, or game development. JavaScript ki bari community or support ki wajah se hamen resources orr help milna Aasaan hota hai.
 
-# JavaScript Run-time Environment Kya Hai?
-JavaScript Run-time Environment (JRE) wo environment hota hai jahan JavaScript code execute hota hai. Yeh environment zaroori tools or libraries provide karta hai jo JavaScript code ko run karne or uske operations ko perform karne ke liye chahiye hote hain.
 
+
+
+
+
+
+
+
+
+
+
+
+
+## JavaScript Run-time Environment Kya Hai?
+JavaScript Run-time Environment (JRE) wo environment hota hai jahan JavaScript code execute hota hai. Yeh environment zaroori tools or libraries provide karta hai jo JavaScript code ko run karne or uske operations ko perform karne ke liye chahiye hote hain.
 
 
 ## Key Components of JavaScript Run-time Environment
@@ -81,7 +93,6 @@ Browsers:
 2. Mozilla Firefox
 3. Microsoft Edge
 4. Safari
-
 
 
 ### Node.js:
