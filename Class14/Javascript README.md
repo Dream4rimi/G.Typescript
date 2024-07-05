@@ -5,7 +5,7 @@ JavaScript aik programming language hai jo web development mein use hoti hai. Ye
 JavaScript se ham buttons par karne se kuch actions perform kar sakte hain forms submit kar sakte hain
 animations bana sakty hain or bhi bahot kuch.
 
-## JavaScript Ke Faide:
+### JavaScript Ke Faide:
 Web Pages Ko Interactive Banati Hai:
 JavaScript se ham apne web pages mein interactive elements add kar sakte hain jaise ke buttons, forms, sliders, etc.
 
