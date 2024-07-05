@@ -727,34 +727,20 @@ fetching();
 
 // response:
 // response: Yeh fetch function ka response object hai. Jab ham fetch request bhejte hain to server se aik response 
-// ata hai jo headers or body contain karta hai.
+// ata hai jo 2 parts mein hota hai headers or body contain karta hai.
 
-// response.headers
-// response.headers: Ye response object ki headers property hai. Headers mein metadata hota hai jo request or 
-// response ke bare mein information deta hai ke ye aik Headers object hai.
+// let Con_Data = response.headers.get('content-type')
+// is line ka matlab hai ke response ke andar jo headers ki property hai usme mein konsy format ka data hai? 
+// matlab jese 'application/json', 'text/html', etc. or us data ko get kar ke aik new veriable mein store krwa dety hain
 
-// Response Headers Kya Hain?
-// Jab ham kisi server se data mangwate hain (e.g., fetch API ka use karke) to server se aik response ata hai.
-// Yeh response do parts mein hota hai:
-// Headers: Yeh metadata hota hai, yani additional information jo response ke baare mein hoti hai.
-// Body: Yeh actual data hota hai jo aapne mangwata hai
+// if(Con_Data && Con_Data.indexOf('application/json') !== -1) { return response.json() }
+// Con_Data ye wahi veriable hai jisme hamne response ke andar jo header ka data hai wo jis format mein bhi hai usy save krwa diyya 
+// Con_Data.indexOf('application/json') ye method ye check kar rha hai ke Con_Data string ke andar application/json substring hai ya nahi
+// !== -1 Iska matlab hai ke agar indexOf method ka result -1 nahi aata, to iska matlab hai ke specified data
+// Con_Data mein moujood hai. Agar ye data Con_Data mein moujood na hota, to indexOf method -1 return karta.
 
-// Metadata Kya Hota Hai?
-// Metadata wo information hoti hai jo data ke bare mein hoti hai. Yeh directly data nahi hoti magar data ke 
-// context ya properties ko batati hai.
 
-// Headers Kya Hote Hain?
-// Headers wo additional information hain jo request or response ke sath send ki jati hai. Yeh key-value pairs ki
-// form mein hote hain. Example headers:
-// Content-Type: Data kis format mein hai (e.g., JSON, HTML).
-// Content-Length: Data ka size.
-// Date: Request ya response ka time.
-// Authorization: Authentication information.
-// Cache-Control: Caching policies
 
-// response.headers Ka Matlab
-// Jab ham fetch API ka use karte hain or response milta hai to response.headers response object ka wo part hota hai
-// jo response ke headers ko represent karta hai. 
 
   // <--------------------------------------------END------------------------------------------------->
  // API: Example 5
