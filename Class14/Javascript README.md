@@ -50,7 +50,7 @@ JavaScript aik powerful language hai jo web development ko interactive or dynami
 # JavaScript Run-time Environment Kya Hai?
 JavaScript Run-time Environment (JRE) wo environment hota hai jahan JavaScript code execute hota hai. Yeh environment zaroori tools or libraries provide karta hai jo JavaScript code ko run karne or uske operations ko perform karne ke liye chahiye hote hain.
 
-# Key Components of JavaScript Run-time Environment
+## Key Components of JavaScript Run-time Environment
 ### JavaScript Engine:
 JavaScript Engine wo software hota hai jo JavaScript code ko execute karta hai. Yeh engine JavaScript code ko machine code (binary code) mein convert karta hai jo computer samajh sakta hai.
 Popular JavaScript engines:
