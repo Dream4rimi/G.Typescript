@@ -54,10 +54,31 @@ JavaScript Run-time Environment (JRE) wo environment hota hai jahan JavaScript c
 ### JavaScript Engine:
 JavaScript Engine wo software hota hai jo JavaScript code ko execute karta hai. Yeh engine JavaScript code ko machine code (binary code) mein convert karta hai jo computer samajh sakta hai.
 Popular JavaScript engines:
-1. V8 (Google Chrome aur Node.js mein use hota hai)
+1. V8 (Google Chrome or Node.js mein use hota hai)
 2. SpiderMonkey (Mozilla Firefox mein use hota hai)
 3. JavaScriptCore (Safari browser mein use hota hai)
 
+### Web APIs:
+Web APIs wo functions or objects hote hain jo browser provide karta hai. Inka use kar ke ham browser ke features or functionalities ko access kar sakte hain jaise Document Object Model (DOM), geolocation, local storage, etc.
+Examples:
+1. DOM API: Web page ke elements ko manipulate karne ke liye.
+2. Fetch API: Network requests send karne ke liye.
+3. Local Storage: Browser mein data store karne ke liye.
+
+### Event Loop:
+Event loop wo mechanism hai jo asynchronous operations ko handle karta hai. Ye ensures karta hai ke code non-blocking tarike se execute ho. Jab asynchronous operations (jaise network request ya timer) complete hoty hain to event loop callback functions ko queue se uthata hai or unko execute karta hai.
+
+### Callback Queue:
+Callback queue mein wo functions store hote hain jo asynchronous operations complete hone ke baad execute hone chahiye. Event loop yahan se callbacks uthata hai or unko execute karta hai.
+
+### Popular JavaScript Run-time Environments
+### Browser Environment:
+JavaScript mostly browsers mein run hoti hai, jahan aapko web APIs aur DOM access milta hai.
+Browsers:
+1. Google Chrome
+2. Mozilla Firefox
+3. Microsoft Edge
+4. Safari
 
 
 
