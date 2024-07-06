@@ -3,25 +3,35 @@
 // Asynchrnous Call back
 // Task Queue
 // Event Loop
-// V8 Engine 
+// V8 Engine        < These All 6 topics in Javascript Readme.md file please read
 
+// Object-Oriented Programming (OOP)
+// Key Concepts of OOP 
+// 1.Class and Object
+// 2.Encapsulation
+// 3.Inheritance
+// 4.Polymorphism
+// 5.Abstraction
+
+// Slide 3 or 4 leni hai
 // mutable ya un mutable in tuple from w3 school
 // async bnany ki zrorat hamen kiyun pari
 // function scop
 // constant loop reassign or mofification
+// oops and class
 
 
 // <-----------------------------------------------END-------------------------------------------->
 // JavaScript Run-time Environment 4 main Components
 
 // JavaScript run-time environment ke 4 main components hote hain: Call Stack, Asynchronous Callbacks, Task Queue, or 
-// Event Loop. In components ka kaam aik sath mil kar JavaScript code ko execute karna hota hai.
+// Event Loop. ye sary components aik sath mil kar JavaScript code ko execute karty hain.
 
 
 
 // 1. Call Stack
-// Call Stack aik data structure hai jo JavaScript code ke function calls ko track karta hai. Jab bhi aik function call
-// hota hai, wo stack mein push ho jata hai, or jab function complete ho jata hai, to wo stack se pop ho jata hai.
+// Call Stack aik data structure hai jo JavaScript code ke function ki calls ko track karta hai. ham Jab bhi aik function ko call
+// kart hain to wo stack mein push ho jata hai, phir jab wo function complete ho jata hai, to wo stack se pop ho jata hai.
 // matlab ke Jab hum kisi cheez ko stack se nikaalte hain to us operation ko "pop" kehte hain.
 
 function first(){
@@ -79,9 +89,9 @@ console.log("End");
 
 // <-----------------------------------------------END-------------------------------------------->
 // 3. Task Queue
-// Task Queue aik queue hai jahan asynchronous callbacks ko place kiya jata hai jab wo ready hote hain.
-// Jab call stack empty hota hai event loop task queue se callbacks uthata hai or unko call stack mein 
-// push karta hai taake wo execute ho sakein.
+// Task Queue mein asynchronous callbacks ko rakha jata hai jab wo ready ho jate hain.
+// Jab call stack empty hota hai tab event loop task queue se callbacks ko uthata hai or unko call stack mein 
+// push kar deta hai taake wo execute ho sakein.
 
 
 
@@ -101,15 +111,15 @@ console.log("End");
 // Notes
 
 // setTimeout ke callback ko 2 seconds ke baad task queue mein push kiya jata hai.
-// Jab call stack empty hota hai (after 'End' is printed), event loop task queue se callback uthata hai or 
-// call stack mein push karta hai taake wo execute ho sake.
+// Jab call stack empty hota hai (after 'End' is printed), tab event loop task queue se callback ko uthata hai or 
+// call stack mein push kar deta hai taake wo execute ho sake.
 
 
 // <-----------------------------------------------END-------------------------------------------->
 // 4. Event Loop
 
-// Event Loop aik mechanism hai jo continuously check karta hai ke call stack empty hai ya nahi or task queue mein 
-// koi pending callback hai ya nahi. Agar call stack empty hoti hai or task queue mein koi callback hota hai 
+// Event Loop aik mechanism hai jo laga-taar check karta hai ke call stack empty hai ya nahi or task queue mein 
+// koi pending callback hai ya nahi. Agar call stack empty hota hai or task queue mein koi callback hota hai 
 // to event loop us callback ko call stack mein push kar deta hai taake wo execute ho sake.
 
 
@@ -124,19 +134,42 @@ setTimeout(() => {
 
 // Note
 
-// Event loop continuously monitor karta hai call stack or task queue ko.
+// Event loop laga-taar monitor karta hai call stack or task queue ko.
 // Jab call stack empty hota hai or task queue mein koi callback ready hota hai to event loop us callback ko
-//  call stack mein push karta hai.
+// call stack mein push karta hai.
 
 
 // Summary
 // Call Stack: Function calls ko track karta hai or manage karta hai.
-// Asynchronous Callbacks: Functions jo asynchronous operations complete hone par execute hote hain.
+// Asynchronous Callbacks: wo Functions jo asynchronous operations complete hone par execute hote hain.
 // Task Queue: Queue jahan asynchronous callbacks ko ready hone par place kiya jata hai.
 // Event Loop: Mechanism jo call stack or task queue ko monitor karta hai or ensure karta hai ke 
 // asynchronous callbacks execute hon.
 
 
 
-// <-----------------------------------------------END-------------------------------------------->
-// V8 Engine
+// <--------------------------------------------------END----------------------------------------------->
+// Object-Oriented Programming (OOP)
+
+
+// OOP aik programming style ya approach hai jo objects ka use kar ke data or functions ko organize karta hai. 
+// ye aik tarika hai jo real-world cheezon ko programming mein represent karne ke liye use hota hai.
+
+// Key Concepts of OOP 
+// 1.Class and Object
+// 2.Encapsulation
+// 3.Inheritance
+// 4.Polymorphism
+// 5.Abstraction
+
+
+// <-------------------------------------------------END-------------------------------------------------->
+// 1. Class aur Object
+
+// Class: Class aik template ya blueprint hoti hai jo objects banane ke liye use hoti hai. 
+// Jaise ghar ka naqsha (blueprint) hota hai jo batata hai ke ghar kaisa banega.
+// Object: Object woh cheez hoti hai jo class se banayi jati hai. Jaise ghar ka naqsha (blueprint) se jo ghar banta hai, 
+// woh object hai.
+
+
+
