@@ -14,11 +14,12 @@
 // 5.Abstraction
 
 // Slide 3 or 4 leni hai
-// mutable ya un mutable in tuple from w3 school
+// mutable ya un mutable in tuple readonly ya simple from w3 school
 // async bnany ki zrorat hamen kiyun pari
 // function scop
 // constant loop reassign or mofification
 // oops and class
+
 
 
 // <-----------------------------------------------END-------------------------------------------->
@@ -31,7 +32,7 @@
 
 // 1. Call Stack
 // Call Stack aik data structure hai jo JavaScript code ke function ki calls ko track karta hai. ham Jab bhi aik function ko call
-// kart hain to wo stack mein push ho jata hai, phir jab wo function complete ho jata hai, to wo stack se pop ho jata hai.
+// karty hain to wo stack mein push ho jata hai, phir jab wo function complete ho jata hai, to wo stack se pop ho jata hai.
 // matlab ke Jab hum kisi cheez ko stack se nikaalte hain to us operation ko "pop" kehte hain.
 
 function first(){
