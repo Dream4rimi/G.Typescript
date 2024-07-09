@@ -28,19 +28,19 @@
 // 4. cook it for 1 second and after this tea is ready
 
 
-// console.log("add water");
+console.log("add water");
 
-// setTimeout(() => {
-//     console.log("add tea leaves");
-// }, 5000);
+setTimeout(() => {
+    console.log("add tea leaves");
+}, 5000);
 
-// setTimeout(() => {
-//     console.log("add sugar");
-// }, 2000);
+setTimeout(() => {
+    console.log("add sugar");
+}, 2000);
 
-// setTimeout(() => {
-//     console.log("tea is ready")
-// }, 1000);
+setTimeout(() => {
+    console.log("tea is ready")
+}, 1000);
 
 
 // Output
@@ -71,17 +71,17 @@
 // jo unpredictable waqt le sakti hain jaise file reading, API requests karna, ya user interactions ko handle karna.
 
 
-// function abc() {
-//     console.log('hello world');
-// }
+function abc() {
+    console.log('hello world');
+}
 
-// function printConsole(cb: () => void) {
-//     cb();
-// }
+function printConsole(cb: () => void) {
+    cb();
+}
 
-// printConsole(() => {});
+printConsole(() => {});
 
-// abc();
+abc();
 
 
 // <------------------------------------------------END------------------------------------------------>
