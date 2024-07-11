@@ -1,13 +1,19 @@
 // JSON subject
 
 // JSON ek lightweight data-interchange format hai jo human-readable aur machine-readable dono hota hai. Ye mainly 
-// data ko exchange karne ke liye use hota hai, specially web applications aur servers ke beech. JSON JavaScript se 
-// inspire hua hai, lekin almost har programming language mein isko parse aur generate kiya ja sakta hai.
-// JSON mein sirf primitive data types (strings, numbers, booleans), null, arrays, objects, aur nested objects
+// data ko exchange karne ke liye use hota hai, specially web applications or servers ke beech. JSON JavaScript se 
+// inspire hua hai, lekin almost har programming language mein isko parse or generate kiya ja sakta hai.
+// JSON mein sirf primitive data types (strings, numbers, booleans), null, arrays, objects, or nested objects
 // allowed hote hain.
 
-// JSON Ki Syntax     
-// JSON ka structure simple aur clear hota hai:
+// English
+// JSON (JavaScript Object Notation) is a lightweight data-interchange format that is easy for humans to read and
+// write and easy for machines to parse and generate. It is primarily used to transmit data between a server and 
+// web application as text.
+
+
+// JSON Ka Syntax     
+// JSON ka structure simple or clear hota hai:
 
 // Objects: Key-value pairs { "key": "value" }.
 // Arrays: Ordered list of values [ "value1", "value2" ].
@@ -17,20 +23,27 @@
 // <----------------------------------------------END----------------------------------------->
 // example 1
 
-// let json_ = {
-//     "name": "shoaib",
-//     "age": 23,
-//     "isstudent": true,
-//     "courses": ["HTML", "CSS", "Javascript", "Typescript"],
-//     "adress": {
-//         "city": "karachi",
-//         "location": "New Karachi",
-//     }
-// };
+let json_ = {
+    "name": "shoaib",
+    "age": 23,
+    "isstudent": true,
+    "courses": ["HTML", "CSS", "Javascript", "Typescript"],
+    "adress": {
+        "city": "karachi",
+        "location": "New Karachi",
+    }
+};
 
 
-// console.log(json_)
+console.log(json_)
 
+
+// Notes
+// Jab ham console.log(json_); karte hain JavaScript engine object ko as a standard JavaScript object mein
+// display karta hai. JavaScript objects mein keys quotes ke bina bhi valid hoti hain.
+
+// Agar hamen exactly JSON format mein data print karna hai to ham JSON.stringify(...) method use kar sakte hain.
+// Or agr ham JSON string ko javascipt object mein convert karna chahty hain to JSON.parse(...) method use kar sakty hain.
 
 // <----------------------------------------------END----------------------------------------->
 // example 2
@@ -53,30 +66,30 @@ let dream: any = {
 console.log(dream); // darect print 
 
 
-// let convert = JSON.stringify(dream); // JSON object print krwany ke liye pehly string mein convert karte hain...
+let convert = JSON.stringify(dream); // is method se ham javascript object ko JSON string mein convert kar rhy hain...
 
-// let extract = JSON.parse(convert);   // is method se ham string ko javascript object mein convert kar sakty hain...
+let extract = JSON.parse(convert);   // is method se ham javascipt string ko javascript object mein convert kar rhy hain...
 
 
-// console.log(extract); // pore object ko print krwa sakty hain
-// console.log(extract.name); // output shoaib
-// console.log(extract.habbits); // output [ 'crickect', 'Video Games', 'Watching Movies' ]
+console.log(extract);        // pore object ko print krwa sakty hain
+console.log(extract.name);    // output shoaib
+console.log(extract.habbits);  // output [ 'crickect', 'Video Games', 'Watching Movies' ]
 
 
 // <----------------------------------------------END----------------------------------------->
 // example 3
 
 
-// let person = {
-//     name: "shoaib",
-//     age: 23,
-//     city: "karachi"
-// }
+let person = {
+    name: "shoaib",
+    age: 23,
+    city: "karachi"
+}
 
 
-// let nowString = JSON.stringify(person);
-// console.log(nowString);    // ye ab json string hai      {"name":"shoaib","age":23,"city":"karachi"}
+let nowString = JSON.stringify(person);
+console.log(nowString);    // ye ab json string hai      {"name":"shoaib","age":23,"city":"karachi"}
 
 
-// let return_Ob = JSON.parse(nowString);
-// console.log(return_Ob);   // wapas javascript object mein     { name: 'shoaib', age: 23, city: 'karachi' }
+let return_Ob = JSON.parse(nowString);
+console.log(return_Ob);   // wapas javascript object mein     { name: 'shoaib', age: 23, city: 'karachi' }

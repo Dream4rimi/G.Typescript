@@ -1,6 +1,13 @@
 import a from './first.js'
 console.log(a);
 
+import { hero, yours as my } from './first.js';  // import karte waqt file ka name bhi change kar sakty hain...
+let value = hero;
+let value2 = my;
+
+console.log(value);
+console.log(value2);
+
 
 import { myName, myBrother } from './second.js'
 console.log(myName + " " + myBrother);
@@ -25,3 +32,16 @@ console.log(data3);
 
 // yahn par ham ne alag alg files se data liya hai module ka use kar ke import export ke zariye
 // 2 tariqo se 1 export name keyword se or 2 export default key word se.........
+
+
+
+// Notes
+// English:
+// Modules in programming are self-contained units of code that encapsulate related functions, classes, or variables.
+// They help in organizing code, improving reusability, and managing dependencies by allowing code to be imported and
+// exported between different files.
+
+// Urdu:
+// Modules programming mein self-contained code ke units hote hain jo related functions, classes, ya variables ko
+// encapsulate karte hain. Yeh code ko organize karne, reusability improve karne, aur dependencies manage karne mein
+// madad karte hain by allowing code ko different files ke beech import aur export karne ke zariye.

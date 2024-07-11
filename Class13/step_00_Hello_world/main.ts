@@ -8,7 +8,7 @@ console.log(veriable);    // output shoaib
 // tsc --init tsconfig file
 
 // TS config file, yaani TypeScript configuration file, ek file hoti hai jo ek TypeScript project ke root directory mein
-//  hoti hai. Is file mein TypeScript compiler ko project ke behavior aur settings ke bare mein bataya jata hai. 
+//  hoti hai. Is file mein TypeScript compiler ko project ke behavior or settings ke bare mein bataya jata hai. 
 //  TypeScript compiler, jo tsc command ke through invoke hota hai, is config file ko dekhta hai aur uske according 
 //  TypeScript code ko compile karta hai JavaScript mein.
 //  Yeh config file typically tsconfig.json naam se hoti hai, lekin aapko manually bhi define ki ja sakti hai aur custom 

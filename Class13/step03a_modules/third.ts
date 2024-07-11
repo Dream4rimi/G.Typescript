@@ -12,3 +12,4 @@ export function sub(value1: number, value2: number): string{
 
     return `Subtraction value ${result}`;
 }
+

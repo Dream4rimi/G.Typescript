@@ -152,9 +152,9 @@ setTimeout(() => {
 // <--------------------------------------------------END----------------------------------------------->
 // Object-Oriented Programming (OOP)
 
-
 // OOP aik programming style ya approach hai jo objects ka use kar ke data or functions ko organize karta hai. 
 // ye aik tarika hai jo real-world cheezon ko programming mein represent karne ke liye use hota hai.
+
 
 // Key Concepts of OOP 
 // 1.Class and Object
@@ -164,13 +164,69 @@ setTimeout(() => {
 // 5.Abstraction
 
 
-// <-------------------------------------------------END-------------------------------------------------->
-// 1. Class aur Object
 
-// Class: Class aik template ya blueprint hoti hai jo objects banane ke liye use hoti hai. 
-// Jaise ghar ka naqsha (blueprint) hota hai jo batata hai ke ghar kaisa banega.
-// Object: Object woh cheez hoti hai jo class se banayi jati hai. Jaise ghar ka naqsha (blueprint) se jo ghar banta hai, 
+// Some of the benefits of Object Oriented Programming are as follows:
+
+// 1.Easier debuging
+// 2.Reuse of code through inheritance
+// 3.Flexibility through polymorphism
+// 4.Effective problem solving
+// 5.Project decoupling (Separate project into groups)
+// 6.Abstraction
+// 7.Scalbility
+
+
+// <-------------------------------------------------END-------------------------------------------------->
+// 1. Class or Object
+
+// Class ko template ya blueprint kaha jata hai jo objects banane ke liye use hoti hai. 
+// Jaise ghar ka naqsha hota hai jo batata hai ke ghar kaisa banega.
+// Object woh cheez hoti hai jo class se banai jati hai. Jaise ghar ke naqshay se jo ghar banta hai
 // woh object hai.
 
 
+class Person {      // ye person naam ki class hai or uske andar 
+  name: string;     // ye uski propertys kehlaengi.
+  age: number;      // Properties define karti hain ke object kaisa hai
 
+
+  constructor(name: string, age: number){  // Constructor class matlab (Person) ke objects ko initialize karta hai mean value assign karne ke liye use hota hai. 
+                                           
+      this.name = name;   // Object ki jo name property hai usko initialize kar rhy hain matlab usme value assign kar rhy hain
+      this.age = age;    // Object ki jo age property hai usko initialize kar rhy hain matlab usme value assign kar rhy hain
+
+  }
+
+
+  greet(){  
+
+      console.log(`Hello my name is ${this.name} and I am ${this.age} years old boy`);
+  
+  }
+
+};
+
+
+let person1 = new Person("Shoaib", 23);
+
+person1.greet();
+
+
+// Note
+// new Person('Shoaib', 23)  ye line constructor ko call karti hi or constructor parameters ko ye values pass karta hai.
+// Constructor parameters:
+// name ke paramter ko 'Shoaib' value assign ki jati hai.
+// age ke paramter ko 23 value assign ki jati hai.
+
+// this.name Person object ki jo name property hai usko 'shoaib' ki value set ki jaa rhi hai isi tarhn age ko bhi bhi
+// person1 object ab name property 'Shoaib' or age property 23 ki values ke sath initialize ho chuka hai.
+// person1 Object:
+// person1.name - 'Shoaib'
+// person1.age - 23
+
+// greet() method use kar ke ham easily object ke andar ka data (jaise name or age) ko display kar sakte hain
+// Yeh method class ki functionality ko show karta hai or user ko object ke bare mein information deta hai.
+
+
+// <-------------------------------------------------END-------------------------------------------------->
+// 2. Class or Object
