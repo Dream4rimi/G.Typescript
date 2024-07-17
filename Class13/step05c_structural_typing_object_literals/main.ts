@@ -13,6 +13,141 @@
 // to wo objects aik dosre ko replace kar sakte hain chahey unki type ya naam kuch bhi ho.
 
 // <-------------------------------------------------END------------------------------------------------------>
+// Fresh and stale object
+// Fresh => New
+// Stale => purana
+
+
+// object literals bana kar hamne veriable ko assign kar ke aik object bana diyya or jo first time object create 
+// hota hai ham usy Fresh object kehty hain matlab newly object abhi abhi tayyar hua huwa...
+
+// Fresh Object
+let person = {
+    name: "shoaib",
+    age: 23,
+    skills: "Typescript",
+    Exp: 3,
+}
+
+
+// Question: Stale Object => object purana kab hota hai matlab aik new object jo ham bnaty hain to
+// wo stale object kab kehlata hai?
+
+// Vlaue => modify
+// veriable => Assign
+// function => argument pass
+
+// 3 Cases mein Fresh object Stale object kehlata hai. 
+// (1.jab ham object ki koi value modify karte hain tab)
+// (2.jab ham object ko kisi veriable mein assign karte hain tab)
+// (3.jab us object ko ham function mein pass karte hain as an argument)
+// tab hmara fresh object stale object ban jata hai.
+
+
+// Case 1: Vlaue => modify
+// isme hamne name ki value ko modify kar diyya dosry name se ab ye stale object kehlaega...
+
+let person_1 = {
+    name: "shoaib",
+    age: 23,
+    skills: "Typescript",
+    Exp: 3,
+}
+
+person_1.name = "Azlaan"
+
+
+
+// Case 2: veriable => Assign
+// isme hamne object ko aik veriable mein assign kar diyya ab ye object stale object ban gaya... 
+
+let person_2 = {
+    name: "shoaib",
+    age: 23,
+    skills: "Tpescript",
+    Exp: 3,
+};
+
+let Get = person_2;
+
+
+
+// Case 3: function => argument pass
+// isme hamne function ko argument ke tor par object pass kar diyya ab ye object stale object kehlaega...
+
+let person_3 = {
+    name: "shoaib",
+    age: 23,
+    skills: "Tpescript",
+    Exp: 3,
+};
+
+function Obj_fun(parameter: any){
+
+};
+
+Obj_fun(person_3);
+
+// <-------------------------------------------------END------------------------------------------------------>
+// Structural Typing
+
+
+// Case 1
+// type alias have 4 propertys
+type data_type1 = {
+    name: string,
+    age: number,
+    roll_num: number,
+    alive: boolean,
+   
+};
+
+// ye aik fresh object hai isme agr type ke hisab se property km ya ziyada denge to ye error dega kiyun ke isko
+// wahifix propertys chahiye hongi jo isme define ki gai hain... 
+
+// object have 5 propertys
+let Stale_Obj1: data_type1 = {
+    name: "shoaib",
+    age: 23,
+    roll_num: 404428,
+    alive: true,
+    class: 16 // Error : kiyun ye property extra hai.
+};
+
+
+
+
+//Case 2
+
+// type alias have 4 propertys
+type data_type2 = {
+    name: string,
+    age: number,
+    roll_num: number,
+    alive: boolean,
+   
+};
+
+// Object have 5 propertys
+let Stale_Obj2 = {
+    name: "shoaib",
+    age: 23,
+    roll_num: 404428,
+    alive: true,
+    class: 16
+};
+
+
+// yahn par new veriable ko 4 property wali data types assign kar ke usme object ko assgin karra rhy hain to object ki 
+// jo extra property hai wo ignore kardi jaegi new veriable mein yahn par fresh object ki tarhn erorr nahi aega 
+// isi cheez ko structural typing kehty hain...
+
+let getting: data_type2 = Stale_Obj2;
+
+console.log(getting)
+
+
+// <-------------------------------------------------END------------------------------------------------------>
 // These two interfaces are completely
 // transferrable in a structural type system:
 

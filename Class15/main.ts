@@ -140,7 +140,7 @@ Making_tea("Add water", 0, () => {
   
 function making_Tea2(Material: string, delay_time: number): Promise<void> {
 
-    let  Pro_Data = new Promise<void>((resolve, reject) => {
+        let  Pro_Data = new Promise<void>((resolve, reject) => {
    
            let data = false;
    
@@ -156,7 +156,7 @@ function making_Tea2(Material: string, delay_time: number): Promise<void> {
    
            }, delay_time);
    
-       })
+       });
    
        return Pro_Data;
    

@@ -30,9 +30,11 @@ console.log(data2);
 console.log(data3);
 
 
-// yahn par ham ne alag alg files se data liya hai module ka use kar ke import export ke zariye
-// 2 tariqo se 1 export name keyword se or 2 export default key word se.........
+// ES6 Modules:
 
+// 1.Named Exports
+// 2.Default Export
+// 3.Importing Entire Module
 
 
 // Notes

@@ -1,7 +1,8 @@
 // Union Literals
 
 // Union litterls ka use ye hota hai ke wo veriables ki values kon kon si hongi ye specific kar deta hai uske ilawa
-// koi dosri value store nahi kar sakty us veriable mein...
+// koi dosri value store nahi kar sakty us veriable mein.
+
 
 // Union Literals ka use kyun karte hain?
 // Union literals TypeScript ka aik powerful feature hai jo hmare code ko type-safe or readable banata hai. 
@@ -9,6 +10,35 @@
 // bohot useful ho sakta hai jaise form input validation, API response handling, or navigation management.
 
 
+// <--------------------------------------------------END------------------------------------------------>
+// Example 0
+
+// data type = type
+// union = | (options)
+// litrals = exact value
+// alias = nickname
+
+
+// agr ham type ke keyword ko use kar ke sath pipe ka sighn use karty huy data type bnaenge to wo union type kehlaegi.
+type ID = string | number | boolean;
+
+
+// or agr ham agr ham veriable ko koi fix data type value bana kar define karenge to wo union litterls kehalegi
+// hard coted value ko hi litterls kehty hain...
+
+let person: "shoaib" = "shoaib"; // accepted
+
+let person1: "shoaib" = "azlaan"; // Error 
+
+
+// ab in dono mein se koi bhi littrel value accepteble hogi or litteral ka matlab hai exactly wahi jo hamne define ki hai
+let person2: "shoaib" | "azlaan" = "azlaan";
+
+
+// ye bhi union litterls kehlaega kiyun ke union ki type ke sath aik specific fixed valie assign ki gai hai..
+type check = string | number | "Week";
+
+// <--------------------------------------------------END------------------------------------------------>
 // Example 1
 
 let myName: string | null;
@@ -43,7 +73,7 @@ console.log(myAge); // Output: pata nahi
 console.log(myAge.toString());  // common to both types can be called even without narrowing
 
 
-console.log(myAge.toLowerCase());  //Can be called on string because of narrowing
+console.log(myAge.toLowerCase());  // Can be called on string because of narrowing
 
 // <--------------------------------------------------END------------------------------------------------>
 // Example 3
@@ -132,7 +162,7 @@ My_Name?.toUpperCase();  // Ye Erorr nahi dega kiyun ke hamne question mark se y
 // Example 7
 
 
-// Isme ham type alias bhi define kar sakty hain
+// Isme ham type alias define kar sakty hain
 type RawData = number | string | boolean | undefined | null;
 
 
@@ -148,7 +178,14 @@ type new_ID = id | undefined | null ;
 // <--------------------------------------------------END------------------------------------------------>
 // Example 8
 
-// Union literals me hum multiple literal types ko combine karte hain. Example ke taur par
+// Union literals mein ham multiple literal types ko combine kar sakty hain. matlab ke veriable sirf wahi value 
+// accept karega jo ham usy define karenge type bana kar iske ilawa wo koi bhi values accept nahi karega.
+
+
+let myName1: "Shoaib" = "Shoaib";
+// is example mein veriable ne sirf wahi value li jo hamne litterly usy define ki iske ilawa koi values nahi lega.
+
+
 
 let direction: "north" | "south" | "east" | "west";
 
@@ -206,20 +243,29 @@ handleResponse("completed"); // Error: Argument of type '"completed"' is not ass
 
 // <--------------------------------------------------END------------------------------------------------>
 // Example 11
-// Navigation:
-
-// Web applications me routes ko handle karne ke liye
 
 
-type Route = "home" | "about" | "contact";
+// Union Types
+// Union types TypeScript mein wahn use hoty hain jahan aik variable ko multiple types assign ki ja rhi hon. 
+// Ham pipe (|) symbol ka use karte huy multiple types define karte hain.
 
-function navigateTo(route: Route) {
+let value: string | number | boolean;
 
-    console.log(`Navigating to ${route}`);
+value = "Hello";   // accepted
+value = 42;       // accepted
+value = true;    // accepted
 
-}
 
-navigateTo("home");    // Valid
-navigateTo("about");   // Valid
-navigateTo("contact"); // Valid
-navigateTo("faq");     // Error: Argument of type '"faq"' is not assignable to parameter of type 'Route'.
+
+// Union Literals
+// Union literals aik specific set of values ko represent karty hain ye bhi union types ki tarhn hi use hote hain
+// lekin isme ham specific values define karte hain jo variable ko assign ho sakti hain.
+
+
+type Direction = "North" | "South" | "East" | "West";
+
+let currentDirection: Direction;
+
+currentDirection = "North";    // accepted
+currentDirection = "South";   // accepted
+currentDirection = "Up";     // invalid because "Up" is not part of the defined literals

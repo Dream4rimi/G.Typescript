@@ -6,7 +6,7 @@
 // interpreter cannot understand.
 
 // Urdu
-// Syntax error aik ghalti hoti hai jo code ke rules ko torti hai jiski wajah se code sahi tarah se parse ya execute
+// Syntax error aik ghalti hoti hai jo code ke rules ke torti hai jiski wajah se code sahi tarah se parse ya execute
 // nahi hota. Yeh errors tab hotay hain jab programmer aisa code likhta hai jo compiler ya interpreter samajh nahi sakta.
 
 lett message = "Hello world";

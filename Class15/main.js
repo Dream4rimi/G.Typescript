@@ -20,16 +20,16 @@
 // 2. after 5 seconds add tea leaves
 // 3. after 2 seconds add sugar
 // 4. cook it for 1 second and after this tea is ready
-// console.log("add water");
-// setTimeout(() => {
-//     console.log("add tea leaves");
-// }, 5000);
-// setTimeout(() => {
-//     console.log("add sugar");
-// }, 2000);
-// setTimeout(() => {
-//     console.log("tea is ready")
-// }, 1000);
+console.log("add water");
+setTimeout(() => {
+    console.log("add tea leaves");
+}, 5000);
+setTimeout(() => {
+    console.log("add sugar");
+}, 2000);
+setTimeout(() => {
+    console.log("tea is ready");
+}, 1000);
 // Output
 // add water              < run karte hi exicute hoga
 // tea is ready           < ye 1 second bad run hoga
@@ -49,14 +49,14 @@
 // execute hota hai aksar kisi task ke mukammal hone ke baad. Yeh hamen specific code ko kisi particular task ke
 // mukammal hone ke baad execute karne ki ijazat deta hai. Yeh un operations ko perform karne mein madad karta hai
 // jo unpredictable waqt le sakti hain jaise file reading, API requests karna, ya user interactions ko handle karna.
-// function abc() {
-//     console.log('hello world');
-// }
-// function printConsole(cb: () => void) {
-//     cb();
-// }
-// printConsole(() => {});
-// abc();
+function abc() {
+    console.log('hello world');
+}
+function printConsole(cb) {
+    cb();
+}
+printConsole(() => { });
+abc();
 // <------------------------------------------------END------------------------------------------------>
 // Example 2 using Callback
 // Recipe of Tea

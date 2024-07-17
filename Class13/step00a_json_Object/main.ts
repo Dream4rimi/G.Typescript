@@ -1,6 +1,6 @@
 // JSON subject
 
-// JSON ek lightweight data-interchange format hai jo human-readable aur machine-readable dono hota hai. Ye mainly 
+// JSON ek lightweight data-interchange format hai jo human-readable or machine-readable dono hota hai. Ye mainly 
 // data ko exchange karne ke liye use hota hai, specially web applications or servers ke beech. JSON JavaScript se 
 // inspire hua hai, lekin almost har programming language mein isko parse or generate kiya ja sakta hai.
 // JSON mein sirf primitive data types (strings, numbers, booleans), null, arrays, objects, or nested objects
@@ -68,7 +68,7 @@ console.log(dream); // darect print
 
 let convert = JSON.stringify(dream); // is method se ham javascript object ko JSON string mein convert kar rhy hain...
 
-let extract = JSON.parse(convert);   // is method se ham javascipt string ko javascript object mein convert kar rhy hain...
+let extract = JSON.parse(convert);   // is method se ham json string ko javascript object mein convert kar rhy hain...
 
 
 console.log(extract);        // pore object ko print krwa sakty hain

@@ -82,8 +82,8 @@ console.log("let: " + z); // Output: shoaib becaouse value is false if value is 
 // // Block scope ka matlab hai ke ek variable sirf us block ke andar accessible hai jahan wo declare kiya gaya hai. 
 // // Ek block generally curly braces {} ke andar likha hota hai, jaise ki if statements, loops, functions, etc.
 
-// // let Aur const Ke Sath Block Scope
-// // let aur const dono hi block-scoped variables hain. Iska matlab ye hai ke ye variables sirf us block ke andar
+// // let or const Ke Sath Block Scope
+// // let or const dono hi block-scoped variables hain. Iska matlab ye hai ke ye variables sirf us block ke andar
 // // accessible hotey hain jahan ye declare kiye gaye hain.
 
 
@@ -107,10 +107,10 @@ console.log(y); // Error: Cannot find name 'y'.
 // Higher-Order Functions 
 
 // Aik function jo aik or function ko return karta hai ya function ko as an argument accept karta hai, 
-// usse higher-order function kehte hain. prime function is category mein aata hai.
+// usy higher-order function kehte hain. prime function is category mein aata hai.
 
+// English: A function that returns another function or accepts a function as an argument.
 
-// Closures
 
 // Closure aik function hai jo apne lexical scope (parent function ke scope) ko "remember" karta hai, chahe wo 
 // function us scope ke bahar hi kyun na execute ho raha ho. agent function is concept ko demonstrate karta hai,

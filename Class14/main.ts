@@ -156,6 +156,11 @@ setTimeout(() => {
 // ye aik tarika hai jo real-world cheezon ko programming mein represent karne ke liye use hota hai.
 
 
+// Blue Print => Structure
+// Properties => (Features)
+// methods => (actions)
+
+
 // Key Concepts of OOP 
 // 1.Class and Object
 // 2.Encapsulation
@@ -177,7 +182,7 @@ setTimeout(() => {
 
 
 // <-------------------------------------------------END-------------------------------------------------->
-// 1. Class or Object
+//  Class Object example 1
 
 // Class ko template ya blueprint kaha jata hai jo objects banane ke liye use hoti hai. 
 // Jaise ghar ka naqsha hota hai jo batata hai ke ghar kaisa banega.
@@ -229,4 +234,104 @@ person1.greet();
 
 
 // <-------------------------------------------------END-------------------------------------------------->
-// 2. Class or Object
+// Class Object example 2
+
+// Blue Print => Structure
+// Properties => (Features)
+// methods => (actions)
+
+
+class Lift {
+
+  Running: boolean = true;
+ 
+  operation(){ // : void
+ 
+     console.log(`Kya lift Opearational hai? agr hai to: (${this.Running}) print karo`);
+     // yahn koi return statment nahi hai isliye ye function undefined return karega...
+ 
+  }
+ 
+ };
+ 
+ let day_1 = new Lift();
+ 
+ console.log(day_1.Running);      // Output: true;
+ console.log(day_1.operation()); // Output: Kya lift Opearational hai? agr hai to: (true) print karo
+ //                             // Output: undefined 
+ 
+ // Note 
+ // console.log(day_1.operation()); 
+ // sab se pehly day_1.operation() class ke andar jo apna console.log() hai wo print hoga uske bad undefined isliye
+ // print ho rha hai kiyun ke wo function koi value return nahi kar rha jabhi 
+ // console.log(day_1.operation()) ko undefined mila print karne ke liye...
+
+
+
+ // Correct code without undefined
+
+ class Lift_2 {
+
+  Running: boolean = true;
+  off: boolean = false;
+ 
+ 
+  operation(): string { 
+ 
+     return `Agr lift Opearational hai to:(${this.Running}) print karo or agr lift off hai to:(${this.off}) print kar do`;
+ 
+  }
+ 
+ };
+ 
+ let day_2 = new Lift_2();
+ 
+ console.log(day_2.Running);     // Output: true
+ console.log(day_2.operation()); // Output: Agr lift Opearational hai to:(true) print karo or agr lift off hai to:(false) print kar do
+ 
+ // abhi isliye undefined print nahi hua kiyun ke operation() method ke andar ke text ko reutn karwa ke operation mein
+ // save krwa liya phir neechy aa kar operation ko console.log mein rakh kar print krwa diyya... 
+ 
+
+ // <-------------------------------------------------END-------------------------------------------------->
+// Class Object example 3
+
+// Blue Print => Structure
+// Properties => (Features)
+// methods => (actions)
+
+
+class Lift_3 {
+  Running: boolean;
+  off: string;
+ 
+ 
+  constructor(val_1: boolean, val_2: string){ // yahn par constructor parameter ke andar values ley rha hai agr unki data type parameter data type se match hoti hain to
+ 
+     this.Running = val_1;   // yahn par val_1 paramter ki value ko class ki Running property mein assign kar rhy hain. 
+     this.off = val_2;      // yahn par val_2 paramter ki value ko class ki off property mein assign kar rhy hain.
+ 
+  }
+ 
+ 
+  operation(): string { // ye method aik string return kar rha hai
+ 
+     return `Agr lift Opearational hai to:(${this.Running}) print karo or agr lift off hai to:(${this.off}) print kar do`;
+  }
+ 
+ };
+ 
+ 
+ let day_3 = new Lift_3(true, "No"); // new keyword likhny se ham constructor ko active kar rhy hain 
+ // or ye Lift() class ka naam hai jisme constructor define hai or yahi se ham constructor ko values dey rhy hain
+ 
+ console.log(day_3);      // Output: Lift { Running: true, off: 'No' }
+ console.log(day_3.operation()); // Output: Agr lift Opearational hai to:(true) print karo or agr lift off hai to:(No) print kar do
+ 
+ 
+ // jab hamne kaha ke blue print structure define karne ke bad ham multiple objects create kar sakty hain usi aik 
+ // structure se to ham aisy karenge.....
+ let day_4 = new Lift_3(true, "Chutti")
+ 
+ console.log(day_4);    // Output: Lift { Running: true, off: 'Chutti' }
+ console.log(day_4.operation()); // Output: Agr lift Opearational hai to:(true) print karo or agr lift off hai to:(Chutti) print kar do
