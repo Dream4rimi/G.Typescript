@@ -136,7 +136,6 @@ console.log(final11); // output 0
 
 
 
-
 let value1: number = 5;
 let value2: number = 6;
 
@@ -150,9 +149,6 @@ console.log(final12); // output 5
 // code ko parhna shuro karta hai. isi wajah se isne pehly verible ko parha to uski 
 // value hamen print kar ke dey di. or phir isne bad mein operater ko dekha to ye dosri dafa iska
 // verible name run hoga to iski value ko dubara se add kar lega.....
-
-
-
 
 
 // 6_ Increment ++ second example

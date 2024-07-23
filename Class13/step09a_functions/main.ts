@@ -93,7 +93,7 @@ console.log(myAdd_4(22,2)); // Output: 24
 // type alias function signature
 
 
-// type alias fuction signature bnaya hai taky function ke parameter ein iski data type assign kar saken... 
+// type alias fuction signature bnaya hai taky function ke parameter mein iski data type assign kar saken... 
 type greetFunction = (value: number) => void;
 
 

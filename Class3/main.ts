@@ -170,11 +170,11 @@ let a: never = 33   // never is rarrely use
 // 16
 // symble Data Type
 // * what is symble
-// * make a program with symble
+// * make a program with symbol
 // * use symble as key of object
 // * use symble as function of class
 // ye type hmesha uniqe id provide karti hai apko iska use tab hota hai jab hmara oject ya function waghera
-// collaps kar rha ho to symble ke zariye usy ham aik uniqe id provide karte hain...
+// collaps kar rha ho to symbol ke zariye usy ham aik uniqe id provide karte hain...
 
 
 let s1 = Symbol();
@@ -216,7 +216,7 @@ console.log(d1.demof1());
 
 // <-----------------------------------------------End------------------------------------------------>
 // 17
-// custom Data Type
+// custom Data Type alias
 
 
 type Customer = {   // we creat this type just like typesript builtin types string, number, boolean, etc.

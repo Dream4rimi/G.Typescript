@@ -27,7 +27,7 @@ console.log(get1); // Output: 2
 // lekin value ke zariye property ko acces nahi kar sakty...  
 const enum Color2 {Red = 1, Green = 4, Blue = 6};
 
-// let get2: Color2 = Color2[4] // Error
+let get2: Color2 = Color2[4] // Error
 
 
 // <-----------------------------------------END----------------------------------------->

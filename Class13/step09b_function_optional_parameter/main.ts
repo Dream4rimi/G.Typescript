@@ -1,6 +1,6 @@
 // Optional parameter function
 
-// ye aik aisa function hota hai jiske optional parameter mein han value den ya na den
+// ye aik aisa function hota hai jiske optional parameter mein  value den ya na den
 // ye function hmesha exicute hoga... 
 
 

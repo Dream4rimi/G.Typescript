@@ -56,11 +56,11 @@
 // forEach or map mein kya defrence hai ?
 // map():
 
+
 // example 1
 // let legends: string[] = ["shoaib", "arshad", "asif"];
 // legends.map((item) => console.log(`He is Rich ${item}`)); // working in seperate line
 
-// <-------------------------------------------------End---------------------------------------------------->
 
 // example 2
 // let legends: string[] = ["shoaib", "arshad", "asif"];
@@ -128,37 +128,7 @@
 
 
 // <-------------------------------------------------End---------------------------------------------------->
-//split()
-
-// ye method aik string ko alag-alag parts mein torrne ke liye istemal hota hai Jab ham split() ko kisi string par
-// call karte hain or usmein aik delimiter specify karte hain matlab split(" ") comma ke beech space dety hain. 
-// to string us delimiter ke hisab se tukron mein divide ho jata hai air aik array mein convert ho jata hai.
-// agr ham comma ke beech space nahi dengy to split ka method string ke har aik charecter ko alag alag kar dega..
-
-
-// example 1
-// let myRoutine = "My name is shoaib and i am student of Governer sindh IT initiative";
-// let itsArray = myRoutine.split("") // without space ye har aik charecter ko string bana kar print kar dega.
-
-// console.log(itsArray);
-
-
-
-// example 2
-// let myRoutine = "My name is shoaib and i am student of Governer sindh IT initiative";
-// let itsArray = myRoutine.split(" ") // comma ke beech space laga denge to ye sirf elements ko string bana dega. 
-
-// console.log(itsArray);
-
-
-
-// let myRoutine: string[] = ["shoaib", "shahzaib", "mithoo"];
-// let itsArray = myRoutine.split(" ");
-
-// console.log(itsArray); // Error ye array pe kaam nahi karta 
-
-// <-------------------------------------------------End---------------------------------------------------->
-// objects all mrthods
+// objects all methods
 
 // Typescript mein object aik aisi data type hota hai jo key-value pairs ki collection represent karta hai or Har aik
 // key aik unique identifier hoti hai jo us key ki corresponding value ko hold karti hai. 
@@ -519,7 +489,7 @@
 // <-------------------------------------------------End---------------------------------------------------->
 // 4. Implementing a Rest parameter
 
-// Write a function sumAll that uses a rest parameter ti take any number of arguments
+// Write a function sumAll that uses a rest parameter to take any number of arguments
 // and returns their sum.
 
 // function sumAll(...Rest_para: number[]){

@@ -61,7 +61,7 @@
 // aik jab condition true hoti hai aur doosri jab condition false hoti hai.
 
 
-// // let isHungry: boolean = true;      // output apple
+// let isHungry: boolean = true;      // output apple
 // let isHungry: boolean = false;       // output water
 
 // let snack = isHungry ? "apple" : "water";
@@ -124,7 +124,7 @@
 // Friend checker game 
 
 
-// // let isFriend: string = "Ameen";  // output Ameen is your friend
+// let isFriend: string = "Ameen";  // output Ameen is your friend
 // let isFriend: string = "Hamza";     // output Hamza is not your frind
 
 // if(isFriend === "Ameen" || isFriend === "Daniyal Nagori"){
@@ -133,6 +133,8 @@
 // else{
 //     console.log(`${isFriend} is not your friend`)
 // }
+
+
 
 
 // example 2
@@ -157,8 +159,11 @@
 // else{
 //     console.log(`${Check_friend.name} is not your friend`)
 // }
+
+
 // <-------------------------------------------END----------------------------------------------->
 // Rock Paper Scissors Game 
+
 
 // let player1: string = "Rock";
 // let player2: string = "Scissors"
@@ -255,6 +260,7 @@
 // }
 
 // halfFryEgg() // function calling line
+
 
 // <-------------------------------------------END----------------------------------------------->
 // Return Functions values
@@ -425,11 +431,14 @@ function online_store(product_price: number, discount: number){
     let total_price = product_price - discount_vew;
  
     return total_price;
- }
+    
+};
+
  
  let product: number = 700;
  let disco: number = 30;
  
+
  let final_price = online_store(product, disco);
  console.log(`Your final price is ${final_price}, after ${disco}% discount.`);
 

@@ -17,7 +17,7 @@
 // <-----------------------------------------------END--------------------------------------------------->
 // fresh object and stale object ? a = b dono alag object
 
-// jab hamne apni product ki price or specs online kie to wo fresh object kehlati hai or agr bad mein hamne
+// jab hamne apni product ki price or specs online karty hain to wo fresh object kehlati hai or agr bad mein hamne
 // uski price barha di ho lekin jo hmari store mein product price hai wo customer ko purani show ho rhi ho to 
 //wo stale object kehlata hai ?
 
@@ -101,10 +101,10 @@
 // <-----------------------------------------------END--------------------------------------------------->
 // for loop
 
-
 // for (initialExpression;  condition;  updateExpression) {
 //      for loop body
 // }
+
 
 
 // (loop counting starts from 0)
@@ -112,6 +112,20 @@
 // for (let i = 0; i < 3; i++){       // Output    // Hello world
 //     console.log("Hello world")                  // Hello world
 // }                                               // Hello world
+
+
+
+// example 2
+
+// for (let i = 0; i < 6; i ++){
+    
+//     if (i == 2){
+//         continue;  // skip
+//     }
+//     console.log(i)
+// }
+
+
 
 // Initial value: let i = 0 (counting starts from 0)
 // Condition: i < 3 (loop chalta hai jab tak i 3 se chhota hai)
@@ -148,25 +162,25 @@
 
 // example 2
 
-// import inquirer from 'inquirer';
+import inquirer from 'inquirer';
 
-// let keepGoing = true;
+let keepGoing = true;
 
-// while (keepGoing) {
-//     const answer = await inquirer.prompt([
-//         {
-//             name: 'response',
-//             message: 'Do you want to continue? (yes/no)',
-//             type: 'input'
-//         }
-//     ]);
+while (keepGoing) {
+    const answer = await inquirer.prompt([
+        {
+            name: 'response',
+            message: 'Do you want to continue? (yes/no)',
+            type: 'input'
+        }
+    ]);
 
-//     if (answer.response.toLowerCase() === 'no') {
-//         keepGoing = false;
-//     } else {
-//         console.log('Continuing...');
-//     }
-// }
+    if (answer.response.toLowerCase() === 'no') {
+        keepGoing = false;
+    } else {
+        console.log('Continuing...');
+    }
+}
 
 // <-----------------------------------------------END--------------------------------------------------->
 // do while loop
@@ -193,26 +207,26 @@
 
 // import inquirer from "inquirer"
 
-// let correctAnswer = "paris";
-// let userAnswer;
+let correctAnswer = "paris";
+let userAnswer;
 
-// do {
-//     let response = await inquirer.prompt([
-//         {
-//             type: 'input',
-//             name: 'answer',
-//             message: 'What is the capital of France?'
-//         }
-//     ]);
+do {
+    let response = await inquirer.prompt([
+        {
+            type: 'input',
+            name: 'answer',
+            message: 'What is the capital of France?'
+        }
+    ]);
 
-//     userAnswer = response.answer.toLowerCase();
+    userAnswer = response.answer.toLowerCase();
 
-//     if (userAnswer === correctAnswer) {
-//         console.log("Correct answer");
-//     } else {
-//         console.log("Wrong answer. Try again!");
-//     }
-// } while (userAnswer !== correctAnswer);
+    if (userAnswer === correctAnswer) {
+        console.log("Correct answer");
+    } else {
+        console.log("Wrong answer. Try again!");
+    }
+} while (userAnswer !== correctAnswer);
 
 // is line ka matlab hai jab tak userAnswer or correctAnswer main same jawab nahi ata tab tak iski value true hai
 // lekin jese hi dono mein same jawab aega inki value false ho jaegi or loop ruk jaega....
@@ -227,16 +241,16 @@
 
 // example 1
 
-// let shoaib: { name: string, age: number, address: string } = {
-//     name: "shoaib",
-//     age: 23,
-//     address: "mai nahi btao ga"
-// };
+let shoaib: { name: string, age: number, address: string } = {
+    name: "shoaib",
+    age: 23,
+    address: "mai nahi btao ga"
+};
 
-// // Start for in loop
-// for (let key in shoaib) {
-//     console.log(`${key}: ${shoaib[key]}`);  // working in erorr
-// }
+// Start for in loop
+for (let key in shoaib) {
+    console.log(`${key}: ${shoaib[key]}`);  // working in erorr
+}
 
 // <-----------------------------------------------END--------------------------------------------------->
 // for of loop

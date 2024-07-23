@@ -86,7 +86,7 @@ console.log(newAge);
 // newAge.toLowerCase(); Error: transpiler cannot narrow
 
 
-if(newAge === "Shoaib"){
+if(newAge === "Shoaib"){ // narrowing
 
     newAge.toUpperCase(); // Can be called kiyun ye ab string data type hai.
     console.log(newAge);
@@ -95,7 +95,7 @@ if(newAge === "Shoaib"){
 
 
 
-if(typeof newAge === "string"){
+if(typeof newAge === "string"){  // narrowing
 
     newAge.toUpperCase(); // Can be called kiyun ye ab string data type hai.
     console.log(newAge);

@@ -10,7 +10,8 @@
 // normal array 
 let personN: string[] = ["Shoaib", "Age", 23, "city"]             // type error
 
-// define mix array
+
+// define mix array union type
 let person2: (string | number)[] = ["Shoaib", "Age", 23, "city"]       // working
 
 

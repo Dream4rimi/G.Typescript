@@ -185,19 +185,18 @@
  // <--------------------------------------------END------------------------------------------------->
 // example 2
 
-// let a: number = 1;
-// let b: number = 2;
+let a: number = 1;
+let b: number = 2;
 
-// setTimeout(function () {
-                                                                     
-
+setTimeout(function () {
                                                        
-//    console.log(a);       // second ye print kiyya jaega  
-// }, 1000);
+   console.log(a);       // second ye print kiyya jaega
 
-// console.log(b); // first ye prnit kiyya jaega
+}, 1000);
 
-// a = 10;
+console.log(b); // first ye prnit kiyya jaega
+
+a = 10;
 
 //  output 2
 //         1
@@ -210,16 +209,16 @@
  // <--------------------------------------------END------------------------------------------------->
 // example 3
 
-// console.log(1);
-// console.log(2);
+console.log(1);
+console.log(2);
 
-// setTimeout(() => {
-//    console.log(3);
-// }, 500);
+setTimeout(() => {
+   console.log(3);
+}, 500);
 
-// for(let i = 1; i < 5; i++){
-//    console.log(`inside loop ${i}`)
-// };
+for(let i = 1; i < 5; i++){
+   console.log(`inside loop ${i}`)
+};
 
 
 // output
@@ -342,61 +341,61 @@
 // Promises example 1
 
 
-// function delay(milliseconds: number): Promise<void> {
+function delay(milliseconds: number): Promise<void> {
 
-//    return new Promise((resolve) => {
+   return new Promise((resolve) => {
 
-//         setTimeout(() => {
+        setTimeout(() => {
 
-//             resolve();
+            resolve();
             
-//         }, milliseconds)
+        }, milliseconds)
 
-//     })
+    })
 
-// }
-
-
-//Using `then`, `catch`, and `finally`:
-
-// delay(1000)
-
-//           .then(() => {
-//             console.log('the delay is over')
-//           })
-
-//           .catch((error) => {
-//             console.log("Somthing went wrong", error)
-//           })
-
-//           .finally(() => {
-//             console.log("this is always executed")
-//           })
+}
 
 
+// Using `then`, `catch`, and `finally`:
 
-// //Using `async/await`:  
-// try {
+delay(1000)
 
-//     await delay(1000);
-//     console.log("Await: The delay is over");
-//   }
+          .then(() => {
+            console.log('the delay is over')
+          })
 
-//   catch (erorr) {
-//     console.error("Await: somthing went wrong", error);
-//   }
+          .catch((error) => {
+            console.log("Somthing went wrong", error)
+          })
 
-//   finally {
-//     console.log("Await: This is always executed")
-//   }
-
-
-  //Now Do Coding from the following Article
-//https://blog.logrocket.com/async-await-in-typescript/
+          .finally(() => {
+            console.log("this is always executed")
+          })
 
 
-//Review the tutorial and convert the code in TypeScript
-//https://www.codingame.com/playgrounds/347/javascript-promises-mastering-the-asynchronous/what-is-asynchronous-in-javascript  
+
+//Using `async/await`:  
+try {
+
+    await delay(1000);
+    console.log("Await: The delay is over");
+  }
+
+  catch (error) {
+    console.error("Await: somthing went wrong", error);
+  }
+
+  finally {
+    console.log("Await: This is always executed")
+  }
+
+
+//   Now Do Coding from the following Article
+// https://blog.logrocket.com/async-await-in-typescript/
+
+
+// Review the tutorial and convert the code in TypeScript
+// https://www.codingame.com/playgrounds/347/javascript-promises-mastering-the-asynchronous/what-is-asynchronous-in-javascript  
   
   
 
@@ -404,63 +403,65 @@
 // Promises example 2
 
 
-// let myPromis = new Promise((resolve, reject) => {
+let myPromis = new Promise((resolve, reject) => {
  
-//     setTimeout(() => {
-//         let succes = true;
+    setTimeout(() => {
 
-//         if (succes){
-//             resolve("Operation is Succesfull");
-//         }
-//         else {
-//             reject("Opeartion is failed")
-//         }
-//     }, 2000); // 2 second
+        let succes = true;
 
-// });
+        if (succes){
+            resolve("Operation is Succesfull");
+        }
+        else {
+            reject("Opeartion is failed")
+        }
 
-// // yahn promise ko use kar rhy hain...
-// myPromis
+    }, 2000); // 2 second
 
-//        .then((result) => {
-//         console.log(result);    //  Output Operation is Succesfull
-//        })
+});
 
-//        .catch((error) => {
-//         console.log(error);
-//        })
+// yahn promise ko use kar rhy hain...
+myPromis
+
+       .then((result) => {
+        console.log(result);    //  Output Operation is Succesfull
+       })
+
+       .catch((error) => {
+        console.log(error);
+       })
 
 
 // <--------------------------------------------END------------------------------------------------->
 // Promises example 3
 
 
-// function fetchData(){
+function fetchData(){
 
-//   return  new Promise((resolve, reject) => {
+  return  new Promise((resolve, reject) => {
 
-//         setTimeout(() => {
+        setTimeout(() => {
 
-//             let data = {id: 1, name: "Shoaib khan"};
+            let data = {id: 1, name: "Shoaib khan"};
 
-//             resolve(data);
+            resolve(data);
 
-//         }, 3000); // 3een second
+        }, 3000); // 3een second
 
-//     });
+    });
 
-// }
+}
 
 
-// fetchData()
+fetchData()
 
-//           .then((data) => {
-//             console.log("data fetch data ", data)
-//           })
+          .then((data) => {
+            console.log("data fetch data ", data)
+          })
 
-//           .catch((erorr) => {
-//             console.log("Erorr ", erorr);
-//           })
+          .catch((erorr) => {
+            console.log("Erorr ", erorr);
+          })
 
 
 
@@ -469,27 +470,27 @@
 // Promises example 4
 
 
-// function der_kardi(second: number){
+function der_kardi(second: number){
 
-//    return new Promise((resolve, reject) => {
-//         setTimeout(() => {
+   return new Promise((resolve, reject) => {
+        setTimeout(() => {
             
-//             resolve(`apke message ka ${second} millisecond tak wait kiyya maine`)
+            resolve(`apke message ka ${second} millisecond tak wait kiyya maine`)
 
-//         }, second);
-//     })
-// }
+        }, second);
+    })
+}
 
 
-// der_kardi(2000)
+der_kardi(2000)
 
-//               .then((message) => {
-//                 console.log(message)
-//               })
+              .then((message) => {
+                console.log(message)
+              })
 
-//               .catch((erorr) => {
-//                 console.log(erorr)
-//               })
+              .catch((erorr) => {
+                console.log(erorr)
+              })
 
 
 

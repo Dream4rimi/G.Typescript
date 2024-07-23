@@ -18,6 +18,7 @@
 // .find(...)
 // .include(...)
 // .fill(...)
+// .split(...)
 
 // <----------------------------------------------END---------------------------------------------->    
 // Function Call twice - Arrow Function =>
@@ -37,6 +38,7 @@
 // Lekin arrow functions mein function keyword ki bajaye => arrow operator ka istemal hota hai, aur function body ko
 // define karne ke liye curly braces {} ki zarurat nahi hoti agar sirf ek expression return karna ho to.
 
+
 // Example.1
 
 // Traditional function expression:
@@ -47,13 +49,17 @@
 
 // console.log("Traditional Function Expression:", multiply(5, 3));
 
+
 // <----------------------------------------------END---------------------------------------------->    
 // Example.2
 
-// // Arrow function
+
+// Arrow function
+
 // let multiplyArrow = (a: number, b: number): number => a * b;
 
 // console.log("Arrow Function:", multiplyArrow(5, 3));
+
 
 // <----------------------------------------------END---------------------------------------------->    
 //Example.3
@@ -254,19 +260,19 @@
 // pori na ho jaye tab tak ye chalta rehta hai.
 // Iska sab se bara faida ye hai ke ham is se complex problem ko chote chote parts mein divide karke solve kar sakte hain
 
-// function countDown(Numbers: number): void{
+function countDown(Numbers: number): void{
 
-//     if (Numbers <= 0){
+    if (Numbers <= 0){
 
-//         console.log("Working properly!");
-//         return;
-//     }
+        console.log("Working properly!");
+        return;
+    }
 
-//     console.log(Numbers);
-//     countDown(Numbers - 1);
-// };
+    console.log(Numbers);
+    countDown(Numbers - 1);
+};
 
-// countDown(19);
+countDown(19);
 
 // Function Call: slowDown(19) ko pehli baar call kiya jata hai. Isme parameter ki value 19 hoti hai.
 // Condition Check: if statement mein parameter <= 0 condition check hoti hai. Pehli baar ke liye parameter ki value 19
@@ -281,11 +287,13 @@
 // .push(...)
 // push ka method value ko array ke end mein add krwata hai...
 
+
 // let legends: string[] = ["Shoaib", "Asif", "Arshad",];
 
 // legends.push("Masoom");
 
 // console.log(legends);     // output [ 'Shoaib', 'Asif', 'Arshad', 'Masoom' ]
+
 
 // <----------------------------------------------END---------------------------------------------->    
 // .unshift(...)
@@ -374,9 +382,9 @@
 
 // let fruits = ["Apple", "Banana", "Orange"];
 
-// let fruitString = fruits.join(", ");
+// let fruitString = fruits.join(" ");
 
-// console.log(fruitString); // Output: "Apple, Banana, Orange"
+// console.log(fruitString); // Output: "Apple Banana Orange"
 
 
 
@@ -434,3 +442,72 @@ let fruits = ["Apple", "Banana", "Orange", "Mango", "Grapes"];
 
 let subset = fruits.slice(1, 4);
 console.log(subset); // Output: ["Banana", "Orange", "Mango"]
+
+
+// <----------------------------------------------END---------------------------------------------->    
+// .find(...)
+
+// Ye sirf first condition element se bari value nikaal kar dega lekin us se bari value nahi
+// ye sirf single value return karega
+
+
+let Num: number[] = [3,5,2,7,9];
+
+let condition_val = Num.find((item) => item > 3);
+console.log(condition_val); // Output: 5
+
+
+// <----------------------------------------------END---------------------------------------------->    
+// .fill(...) => Array.fill(value, start?, end?)
+
+// fill() method JavaScript/TypeScript mein array ko ek specified value se fill karta hai, start index se le kar 
+// end index tak. Ye method mutable hai, yani array ko modify karta hai jisme ye call hota hai.
+
+
+let arr_values: number[] = [1,2,3,4,6,];
+
+let Add_val = arr_values.fill(5, 4, 5);
+console.log(Add_val);  // Output: [ 1, 2, 3, 4, 5 ]
+
+
+// <----------------------------------------------END---------------------------------------------->    
+// .include(...)
+
+// include ka mathod array mein se hmari di hui value ko check karta hai or true ya false mein
+// return karta hai agr wo value usme moujod hogi to true warna false dega...
+   
+let members: string[] = ["Asif", "Arshad", "Shoaib", "Shahzaib", "Awais"];
+
+let Re_value = members.includes("Shoaib");
+console.log(Re_value);  // Output: true
+
+
+// <----------------------------------------------END---------------------------------------------->    
+//split()
+
+// ye method aik string ko alag-alag parts mein torrne ke liye istemal hota hai Jab ham split() ko kisi string par
+// call karte hain or usmein aik delimiter specify karte hain matlab split(" ") comma ke beech space dety hain. 
+// to string us delimiter ke hisab se tukron mein divide ho jata hai air aik array mein convert ho jata hai.
+// agr ham comma ke beech space nahi dengy to split ka method string ke har aik charecter ko alag alag kar dega..
+
+
+// example 1
+// let myRoutine = "My name is shoaib and i am student of Governer sindh IT initiative";
+// let itsArray = myRoutine.split("") // without space ye har aik charecter ko string bana kar print kar dega.
+
+// console.log(itsArray);
+
+
+
+// example 2
+// let myRoutine = "My name is shoaib and i am student of Governer sindh IT initiative";
+// let itsArray = myRoutine.split(" ") // comma ke beech space laga denge to ye sirf elements ko string bana dega. 
+
+// console.log(itsArray);
+
+
+
+// let myRoutine: string[] = ["shoaib", "shahzaib", "mithoo"];
+// let itsArray = myRoutine.split(" ");
+
+// console.log(itsArray); // Error ye array pe kaam nahi karta 
